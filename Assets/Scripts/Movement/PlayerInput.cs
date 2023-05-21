@@ -62,6 +62,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseLock"",
+                    ""type"": ""Button"",
+                    ""id"": ""1a626a6f-9a0f-4adb-817b-094dc591098a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -101,11 +110,22 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""532c4db2-7814-43c7-9fbd-05bdadb5704f"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Keyboard>/x"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""SwitchCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""05e3ac83-8a0e-4dce-8a3e-8bd7216c50c2"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseLock"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -120,6 +140,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Default_Backward = m_Default.FindAction("Backward", throwIfNotFound: true);
         m_Default_Rotation = m_Default.FindAction("Rotation", throwIfNotFound: true);
         m_Default_SwitchCamera = m_Default.FindAction("SwitchCamera", throwIfNotFound: true);
+        m_Default_MouseLock = m_Default.FindAction("MouseLock", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -185,6 +206,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Default_Backward;
     private readonly InputAction m_Default_Rotation;
     private readonly InputAction m_Default_SwitchCamera;
+    private readonly InputAction m_Default_MouseLock;
     public struct DefaultActions
     {
         private @PlayerInput m_Wrapper;
@@ -193,6 +215,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Backward => m_Wrapper.m_Default_Backward;
         public InputAction @Rotation => m_Wrapper.m_Default_Rotation;
         public InputAction @SwitchCamera => m_Wrapper.m_Default_SwitchCamera;
+        public InputAction @MouseLock => m_Wrapper.m_Default_MouseLock;
         public InputActionMap Get() { return m_Wrapper.m_Default; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -214,6 +237,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SwitchCamera.started += instance.OnSwitchCamera;
             @SwitchCamera.performed += instance.OnSwitchCamera;
             @SwitchCamera.canceled += instance.OnSwitchCamera;
+            @MouseLock.started += instance.OnMouseLock;
+            @MouseLock.performed += instance.OnMouseLock;
+            @MouseLock.canceled += instance.OnMouseLock;
         }
 
         private void UnregisterCallbacks(IDefaultActions instance)
@@ -230,6 +256,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SwitchCamera.started -= instance.OnSwitchCamera;
             @SwitchCamera.performed -= instance.OnSwitchCamera;
             @SwitchCamera.canceled -= instance.OnSwitchCamera;
+            @MouseLock.started -= instance.OnMouseLock;
+            @MouseLock.performed -= instance.OnMouseLock;
+            @MouseLock.canceled -= instance.OnMouseLock;
         }
 
         public void RemoveCallbacks(IDefaultActions instance)
@@ -253,5 +282,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnBackward(InputAction.CallbackContext context);
         void OnRotation(InputAction.CallbackContext context);
         void OnSwitchCamera(InputAction.CallbackContext context);
+        void OnMouseLock(InputAction.CallbackContext context);
     }
 }

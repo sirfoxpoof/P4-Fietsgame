@@ -5,10 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Wasd : MonoBehaviour
 {
-    float hor, ver;
-    public float speed, speedIncrement;
-    public float sensitivity;
-    Vector3 movement;
+    public float speed, speedIncrement, sensitivity;
     public Rigidbody rb;
 
     private bool increaseSpeed = false;
@@ -33,12 +30,6 @@ public class Wasd : MonoBehaviour
         rotation.Disable();
     }
 
-    private void Start()
-    {
-        //speed = 5;  
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (increaseSpeed)

@@ -1,43 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseLock : MonoBehaviour
 {
-    public bool isLocked;
-    public KeyCode lockButton;
+    private bool lockMous;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-        isLocked = true;
+        lockMous = true;
     }
-    private void Update()
+    public void MousLock (InputAction.CallbackContext context)
     {
-        if (Input.GetKeyUp(lockButton))
+        if(lockMous == false)
         {
-            if (isLocked == false)
-            {
-                isLocked = true;
-            }
-            else
-            {
-                isLocked = false;
-            }
+            lockMous = true;
         }
-
-        if (isLocked == true)
+        else
+        {
+            lockMous = false;
+        }
+        if (lockMous == true)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-        else if (isLocked == false)
+        else if(lockMous == false)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
 
+        
     }
 }

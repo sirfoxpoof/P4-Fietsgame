@@ -8,13 +8,14 @@ public class CamSwitch : MonoBehaviour
     bool thirdOn;
 
     private void Start()
-    {
+    {/*
         third.SetActive(false);
         thirdOn = false;
     }
 
     void Update()
     {
+        
         if (thirdOn == false && Input.GetMouseButtonDown(0))
         {
             first.SetActive(false);
@@ -27,5 +28,6 @@ public class CamSwitch : MonoBehaviour
             third.SetActive(false);
             thirdOn = false;
         }
+        */
     }
 }

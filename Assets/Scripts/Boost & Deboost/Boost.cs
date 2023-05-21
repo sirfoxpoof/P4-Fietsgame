@@ -19,11 +19,17 @@ public class Boost : MonoBehaviour
     {
         if(Physics.Raycast(transform.position, -transform.up, out boDeBo, 1) && gameObject.CompareTag("Boost"))
         {
+            print("aaaaaaaaaaaaaah");
             speedScript.speed = boostSpeed; 
         }
-        if (Physics.Raycast(transform.position, -transform.up, out boDeBo, 1) && gameObject.CompareTag("Deboost"))
+        if (Physics.Raycast(transform.position, -transform.up, out boDeBo, 10))
         {
-            speedScript.speed = deBoostSpeed;
+            if(gameObject.CompareTag("Deboost"))
+            {
+                print("HA slowwwwwwww");
+                speedScript.speed = deBoostSpeed;
+            }
+           
         }
     }
 }
