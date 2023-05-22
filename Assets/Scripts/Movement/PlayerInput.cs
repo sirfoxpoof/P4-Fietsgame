@@ -71,6 +71,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Fietsbel"",
+                    ""type"": ""Button"",
+                    ""id"": ""df87ed4d-7d66-40a4-937a-53eac6c989c3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -110,7 +119,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""532c4db2-7814-43c7-9fbd-05bdadb5704f"",
-                    ""path"": ""<Keyboard>/x"",
+                    ""path"": ""<Keyboard>/v"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -128,6 +137,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""MouseLock"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c715577a-3c2f-4779-af26-4e51990a9e0a"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fietsbel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -141,6 +161,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Default_Rotation = m_Default.FindAction("Rotation", throwIfNotFound: true);
         m_Default_SwitchCamera = m_Default.FindAction("SwitchCamera", throwIfNotFound: true);
         m_Default_MouseLock = m_Default.FindAction("MouseLock", throwIfNotFound: true);
+        m_Default_Fietsbel = m_Default.FindAction("Fietsbel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,6 +228,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Default_Rotation;
     private readonly InputAction m_Default_SwitchCamera;
     private readonly InputAction m_Default_MouseLock;
+    private readonly InputAction m_Default_Fietsbel;
     public struct DefaultActions
     {
         private @PlayerInput m_Wrapper;
@@ -216,6 +238,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Rotation => m_Wrapper.m_Default_Rotation;
         public InputAction @SwitchCamera => m_Wrapper.m_Default_SwitchCamera;
         public InputAction @MouseLock => m_Wrapper.m_Default_MouseLock;
+        public InputAction @Fietsbel => m_Wrapper.m_Default_Fietsbel;
         public InputActionMap Get() { return m_Wrapper.m_Default; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -240,6 +263,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @MouseLock.started += instance.OnMouseLock;
             @MouseLock.performed += instance.OnMouseLock;
             @MouseLock.canceled += instance.OnMouseLock;
+            @Fietsbel.started += instance.OnFietsbel;
+            @Fietsbel.performed += instance.OnFietsbel;
+            @Fietsbel.canceled += instance.OnFietsbel;
         }
 
         private void UnregisterCallbacks(IDefaultActions instance)
@@ -259,6 +285,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @MouseLock.started -= instance.OnMouseLock;
             @MouseLock.performed -= instance.OnMouseLock;
             @MouseLock.canceled -= instance.OnMouseLock;
+            @Fietsbel.started -= instance.OnFietsbel;
+            @Fietsbel.performed -= instance.OnFietsbel;
+            @Fietsbel.canceled -= instance.OnFietsbel;
         }
 
         public void RemoveCallbacks(IDefaultActions instance)
@@ -283,5 +312,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnRotation(InputAction.CallbackContext context);
         void OnSwitchCamera(InputAction.CallbackContext context);
         void OnMouseLock(InputAction.CallbackContext context);
+        void OnFietsbel(InputAction.CallbackContext context);
     }
 }

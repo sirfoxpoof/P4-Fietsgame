@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Fietsbel",
+                    "type": "Button",
+                    "id": "df87ed4d-7d66-40a4-937a-53eac6c989c3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -88,7 +97,7 @@
                 {
                     "name": "",
                     "id": "532c4db2-7814-43c7-9fbd-05bdadb5704f",
-                    "path": "<Keyboard>/x",
+                    "path": "<Keyboard>/v",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -104,6 +113,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MouseLock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c715577a-3c2f-4779-af26-4e51990a9e0a",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fietsbel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
