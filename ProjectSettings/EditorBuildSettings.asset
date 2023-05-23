@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Test Stuff/test danoets/MainMenu.unity
-    guid: 75ec7fd5fb270ce47a8d483599cd38fc
+    path: Assets/Test Stuff/test danoets/TestUI.unity
+    guid: 35dec1fea76000d4d9250d4936d49642
   m_configObjects: {}
