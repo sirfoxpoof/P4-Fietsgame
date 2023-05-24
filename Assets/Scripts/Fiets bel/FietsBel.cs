@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static Cinemachine.CinemachineOrbitalTransposer;
 
 public class FietsBel : MonoBehaviour
 {
@@ -11,7 +12,12 @@ public class FietsBel : MonoBehaviour
 
     public void Bel(InputAction.CallbackContext context)
     {
-        belDing.Play();
-        belVisual.Play();
+        if (context.started)
+        {
+            belDing.pitch = Random.Range(0.85f, 1.15f);
+            belDing.Play();
+            belVisual.Play();
+        }
+        
     }
 }

@@ -32,17 +32,6 @@ public class Cam : MonoBehaviour
             firstPerson.enabled = !firstPerson.enabled;
             thirdPerson.enabled = !thirdPerson.enabled;
 
-            /*
-            if (firstPerson.enabled)
-            {
-                firstPerson.enabled = false;
-                thirdPerson.enabled = true;
-            } else
-            {
-                firstPerson.enabled = true;
-                thirdPerson.enabled = false;
-            }
-            */
         }
     }
 }
