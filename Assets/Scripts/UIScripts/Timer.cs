@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
     public TMP_Text timerText;
     public float startTime, time;
     public string minutes, seconds;
+    public FinishLine finishScript;
 
     void Start()
     {
@@ -15,12 +16,21 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        time = Time.time - startTime;
+        if (finishScript.crossedFinish == true)
+        {
+            return;
+        }
 
-        minutes = ((int)time / 60).ToString();
-        seconds = (time % 60).ToString("f1");
+        else
+        {
+            time = Time.time - startTime;
 
-        timerText.text = minutes + ":" + seconds;
+            minutes = ((int)time / 60).ToString();
+            seconds = (time % 60).ToString("f1");
+
+            timerText.text = minutes + ":" + seconds;
+        }
+
+       
     }
-
 }
