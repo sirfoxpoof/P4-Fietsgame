@@ -11,9 +11,14 @@ public class MainmenuButtonFunctions : MonoBehaviour
         Debug.Log("Quits game");
     }
 
-    public void StartGame()
+    public void StartTutorial()
     {
-        SceneManager.LoadScene("DaniqueTestScene");
+        SceneManager.LoadScene("TutorialLevelScene");
+
+    }
+    public void StartEindLevel()
+    {
+        SceneManager.LoadScene("EindLevelScene");
 
     }
 }

@@ -108,12 +108,12 @@ TextureImporter:
       name: LevelselectCuub_0
       rect:
         serializedVersion: 2
-        x: 482
-        y: 163
-        width: 1005
-        height: 879
+        x: 375
+        y: 165
+        width: 888
+        height: 832
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 74, y: 50, z: 83, w: 48}
       outline: []
       physicsShape: []
