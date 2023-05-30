@@ -11,7 +11,6 @@ public class Wasd : MonoBehaviour
 
     private bool increaseSpeed = false;
     private bool decreaseSpeed = false;
-    public bool movementOn = true;
 
     private PlayerInput playerInput;
     private InputAction rotation;
@@ -24,10 +23,6 @@ public class Wasd : MonoBehaviour
        
     }
 
-    private void Start()
-    {
-        movementOn = true;
-    }
 
     private void OnEnable()
     {
@@ -41,74 +36,67 @@ public class Wasd : MonoBehaviour
 
     void Update()
     {
-        if (movementOn)
-        {
-            if (increaseSpeed)
-            {
-                if (speed < 100f)
-                {
-                    speed += speedIncrement;
-                }
-            }
-            else
-            {
-                if (speed > 0f)
-                {
-                    speed -= speedIncrement;
-                }
-            }
+       
+         if (increaseSpeed)
+         {
+             if (speed < 100f)
+             {
+                 speed += speedIncrement;
+             }
+         }
+         else
+         {
+             if (speed > 0f)
+             {
+                 speed -= speedIncrement;
+             }
+         }
 
-            if (decreaseSpeed)
-            {
-                if (speed > -100)
-                {
-                    speed -= speedIncrement;
-                }
-            }
-            else
-            {
-                if (speed < 0)
-                {
-                    speed += speedIncrement;
-                }
-            }
+         if (decreaseSpeed)
+         {
+             if (speed > -100)
+             {
+                 speed -= speedIncrement;
+             }
+         }
+         else
+         {
+             if (speed < 0)
+             {
+                 speed += speedIncrement;
+             }
+         }
 
-            transform.Translate(transform.forward * speed * sensitivity * Time.deltaTime, Space.World);
-        }
+          transform.Translate(transform.forward * speed * sensitivity * Time.deltaTime, Space.World);
+        
        
     }
 
     public void Forward (InputAction.CallbackContext context)
-    {
-        if (movementOn)
-        {
-            if (context.started)
-            {
-                increaseSpeed = true;
-            }
+    { 
+         if (context.started)
+         {
+            increaseSpeed = true;
+         }
 
-            if (context.canceled)
-            {
-                increaseSpeed = false;
-            }      
-        }
-        
+         if (context.canceled)
+         {
+            increaseSpeed = false;
+         }        
     }
 
     public void Backward (InputAction.CallbackContext context)
     {
-        if (movementOn)
-        {
-            if (context.started)
-            {
-                decreaseSpeed = true;
-            }
+         if (context.started)
+         {
+             decreaseSpeed = true;
+         }
 
-            if (context.canceled)
-            {
-                decreaseSpeed = false;
-            }
-        }
+         if (context.canceled)
+         {
+             decreaseSpeed = false;
+         }
+        
     }
 
     public float Rotation ()

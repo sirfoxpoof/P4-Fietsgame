@@ -411,7 +411,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 243905393}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1015216969}
+        m_TargetAssemblyTypeName: Collisione, Assembly-CSharp
+        m_MethodName: RespawnButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &243905393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,7 +794,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 714155399}
-  - component: {fileID: 714155398}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -790,18 +801,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &714155398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714155397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 535fcf9f61c705040a8607299ab9cc43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &714155399
 Transform:
   m_ObjectHideFlags: 0
@@ -1050,6 +1049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535fcf9f61c705040a8607299ab9cc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lockMous: 0
 --- !u!4 &993906809
 Transform:
   m_ObjectHideFlags: 0
@@ -1192,6 +1192,7 @@ GameObject:
   - component: {fileID: 1015216967}
   - component: {fileID: 1015216968}
   - component: {fileID: 1015216969}
+  - component: {fileID: 1015216970}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1315,7 +1316,6 @@ MonoBehaviour:
   speedIncrement: 0.1
   sensitivity: 0.15
   rb: {fileID: 1015216961}
-  movementOn: 1
 --- !u!114 &1015216968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1338,14 +1338,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1015216960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2851f13c49c81354e800197b6227e443, type: 3}
+  m_Script: {fileID: 11500000, guid: 7441b15f1a8263c45b667296b9c3c01d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawn: {fileID: 941277201}
-  player: {fileID: 1015216966}
-  deathCollider: {fileID: 1437313592}
   wasd: {fileID: 1015216967}
   deathScreen: {fileID: 2027287478}
+  mousLock: {fileID: 1015216970}
+  respawn: {fileID: 941277201}
+  player: {fileID: 1015216966}
+--- !u!114 &1015216970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015216960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535fcf9f61c705040a8607299ab9cc43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockMous: 0
 --- !u!1 &1099724528
 GameObject:
   m_ObjectHideFlags: 0
@@ -6597,7 +6610,7 @@ GameObject:
   - component: {fileID: 1437313592}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7553,7 +7566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2027287476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7601,7 +7614,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027287475}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}

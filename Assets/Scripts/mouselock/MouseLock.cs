@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class MouseLock : MonoBehaviour
 {
-    private bool lockMous;
+    public bool lockMous;
 
     private void Start()
     {
