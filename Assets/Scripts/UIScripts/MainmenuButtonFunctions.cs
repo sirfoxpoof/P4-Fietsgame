@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainmenuButtonFunctions : MonoBehaviour
 {
+    public GameObject loadingCanvas, mainMenuCanvas;
+    public Slider loadprogressSlider;
+    public float progressValue;
+
     public void QuitGame()
     {
         Application.Quit();
@@ -21,5 +26,31 @@ public class MainmenuButtonFunctions : MonoBehaviour
         SceneManager.LoadScene("EindLevelScene");
 
     }
+
+    public void LoadLevelButton(string levelToLoad)
+    {
+        mainMenuCanvas.SetActive(false);
+        loadingCanvas.SetActive(true);
+        StartCoroutine(LoadLevelASync(levelToLoad));
+    }
+
+    IEnumerator LoadLevelASync(string levelToLoad)
+    {
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(levelToLoad);
+
+        loadOperation.allowSceneActivation = false;
+        yield return new WaitForSeconds(2f);
+        loadOperation.allowSceneActivation = true;
+
+        while (!loadOperation.isDone)
+        {
+            progressValue = Mathf.Clamp01(loadOperation.progress / 0.9f);
+            loadprogressSlider.value = progressValue;
+            Debug.Log(progressValue);
+            yield return new WaitForSeconds(3f);
+            
+        }      
+    }
+
 }
     
