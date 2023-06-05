@@ -34,7 +34,7 @@ public class Death : MonoBehaviour
         deathScreen.GetComponent<Canvas>().enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        player.transform.eulerAngles = new Vector3(0, 0, 0);
-        cam.transform.rotation = Quaternion.Euler(0, 0, 0);
+        player.transform.eulerAngles = new Vector3(0, 180, 0);
+        cam.transform.rotation = Quaternion.Euler(0, 180, 0);
     }
 }
