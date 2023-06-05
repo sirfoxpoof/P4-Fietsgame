@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Collisione : MonoBehaviour
+public class Death : MonoBehaviour
 {
     public Wasd wasd;
     public Canvas deathScreen;
     public MouseLock mousLock;
-    public Transform respawn, player;
+    public Transform respawn, player, cam;
 
 
     private void Start()
@@ -34,5 +34,7 @@ public class Collisione : MonoBehaviour
         deathScreen.GetComponent<Canvas>().enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        player.transform.eulerAngles = new Vector3(0, 0, 0);
+        cam.transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 }

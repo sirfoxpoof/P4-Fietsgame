@@ -1316,6 +1316,9 @@ MonoBehaviour:
   speedIncrement: 0.1
   sensitivity: 0.15
   rb: {fileID: 1015216961}
+  steer: {fileID: 0}
+  wheelFactor: 1
+  specialControllerSensitivity: 1
 --- !u!114 &1015216968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1346,6 +1349,7 @@ MonoBehaviour:
   mousLock: {fileID: 1015216970}
   respawn: {fileID: 941277201}
   player: {fileID: 1015216966}
+  cam: {fileID: 1560145445}
 --- !u!114 &1015216970
 MonoBehaviour:
   m_ObjectHideFlags: 0

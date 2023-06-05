@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9162585411747140015}
   - component: {fileID: 5226376204660137482}
   - component: {fileID: 8026301010232388288}
+  - component: {fileID: 3837742429167844312}
   m_Layer: 0
   m_Name: weg met put
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3837742429167844312
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8386786961413442325}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.994465, y: 2.6008615, z: 9.999998}
+  m_Center: {x: 0, y: -1.016217, z: 0}

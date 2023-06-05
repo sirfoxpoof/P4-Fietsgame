@@ -118,6 +118,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""fb3996f1-7730-4996-be1e-cf030451097c"",
+                    ""path"": ""<Joystick>/stick/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""532c4db2-7814-43c7-9fbd-05bdadb5704f"",
                     ""path"": ""<Keyboard>/v"",
                     ""interactions"": """",
