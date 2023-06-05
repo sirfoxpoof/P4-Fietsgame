@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
-//using System.IO.Ports;
+using System.IO.Ports;
 
 
 public class Wasd : MonoBehaviour
@@ -30,7 +30,7 @@ public class Wasd : MonoBehaviour
     private bool specialControllerActive = false;
 
     // change your serial port
-    //SerialPort serialPort = new SerialPort("COM7", 9600);
+    SerialPort serialPort = new SerialPort("COM7", 9600);
 
 
     private void Awake()
@@ -42,8 +42,8 @@ public class Wasd : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //serialPort.Open();
-        //serialPort.ReadTimeout = 100; // In my case, 100 was a good amount to allow quite smooth transition. 
+        serialPort.Open();
+        serialPort.ReadTimeout = 100; // In my case, 100 was a good amount to allow quite smooth transition. 
     }
     private void OnEnable()
     {
@@ -57,11 +57,11 @@ public class Wasd : MonoBehaviour
 
     void Update()
     {
-        //if (serialPort.IsOpen)
+        if (serialPort.IsOpen)
         {
             try
             {
-                //rawData = serialPort.ReadLine();
+                rawData = serialPort.ReadLine();
 
                 if (rawData.Length > 0)
                 {
