@@ -14,9 +14,8 @@ public class Death : MonoBehaviour
     private void Start()
     {
         deathScreen.GetComponent <Canvas> ().enabled = false;
-    }
-    //wanneer we een object raken
-    //krijgen info over de collision en daarom naam collisionInfo
+    }//canvas staat standaard uit
+   
     private void OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.collider.tag == "Obstacle")
