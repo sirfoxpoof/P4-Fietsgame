@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5068054644380033778}
   - component: {fileID: 8213021240060112215}
   - component: {fileID: 6205524898175359389}
+  - component: {fileID: -3879263058112579621}
   m_Layer: 0
   m_Name: HuisVoortuin
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-3879263058112579621
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5557029024002881608}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 0.011103986, z: 2.000819}
+  m_Center: {x: -0.022016406, y: 0.005551993, z: 1.2201344}

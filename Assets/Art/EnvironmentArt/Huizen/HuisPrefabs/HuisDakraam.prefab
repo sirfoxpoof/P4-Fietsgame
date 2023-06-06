@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6311596059443152976}
   - component: {fileID: 6933450747473446901}
   - component: {fileID: 5178127959252448063}
+  - component: {fileID: 8467597230934232123}
   m_Layer: 0
   m_Name: HuisDakraam
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8467597230934232123
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6691394127309640426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.0016775, y: 7.6040597, z: 2.7445838}
+  m_Center: {x: 0.20775235, y: 3.8020298, z: -1.0170552}
