@@ -1,9 +1,10 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Boost : MonoBehaviour
+public class DeBoost : MonoBehaviour
 {
-    public float speedBoost;
+    public float mudDeBoost;
 
     public Wasd wasd;
 
@@ -11,17 +12,18 @@ public class Boost : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(WindBoost());
+            StartCoroutine(MudBoost());
         }
     }
 
-    
-    private IEnumerator WindBoost()
+
+    private IEnumerator MudBoost()
     {
-        wasd.speed += speedBoost;
+        wasd.speed -= mudDeBoost;
 
         yield return new WaitForSeconds(2.5f);
 
-        wasd.speed -= speedBoost;
+        wasd.speed += mudDeBoost;
     }
+
 }

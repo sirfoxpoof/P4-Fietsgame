@@ -11,4 +11,9 @@ public class WinGame : MonoBehaviour
             gameWon = true;
         }
     }
+
+    private void Update()
+    {
+        
+    }
 }
