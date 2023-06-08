@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 68318682882451002}
   - component: {fileID: 3989464621604153759}
   - component: {fileID: 1205165513716850005}
+  - component: {fileID: 1257503226838164531}
   m_Layer: 0
   m_Name: kliko.plastic
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1257503226838164531
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844820575842696320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7052314, y: 0.7765916, z: 1.8829837}
+  m_Center: {x: 0.00010420382, y: 0.3843898, z: -0.8005134}

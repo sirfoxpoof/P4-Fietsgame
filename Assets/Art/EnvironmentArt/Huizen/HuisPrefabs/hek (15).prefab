@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5119761312261957246}
   - component: {fileID: 8116278576160336347}
   - component: {fileID: 6288756901290614033}
+  - component: {fileID: -9005615500937040427}
   m_Layer: 0
   m_Name: hek (15)
   m_TagString: Untagged
@@ -84,6 +85,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-9005615500937040427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5496321622805134532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5, y: 2, z: 0.21984127}
+  m_Center: {x: 0, y: 1, z: 0.002899699}
 --- !u!1001 &6320903475496963287
 PrefabInstance:
   m_ObjectHideFlags: 0

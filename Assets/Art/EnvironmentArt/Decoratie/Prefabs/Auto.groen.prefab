@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3157382852321355239}
   - component: {fileID: 2053251569499580994}
   - component: {fileID: 4294861903552437896}
+  - component: {fileID: -3440344928134301766}
   m_Layer: 0
   m_Name: Auto.groen
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-3440344928134301766
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2349355449024151389}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3572245, y: 1.6500024, z: 3.2108035}
+  m_Center: {x: 0, y: 0.8250012, z: 0.048817575}

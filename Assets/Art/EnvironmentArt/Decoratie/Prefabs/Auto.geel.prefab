@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4739070494319178364}
   - component: {fileID: 8533006367171214809}
   - component: {fileID: 5877095659365075219}
+  - component: {fileID: 5456222412229225398}
   m_Layer: 0
   m_Name: Auto.geel
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5456222412229225398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5372617527788415174}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3572245, y: 1.6500024, z: 3.2108035}
+  m_Center: {x: 0, y: 0.8250012, z: 0.048817575}
