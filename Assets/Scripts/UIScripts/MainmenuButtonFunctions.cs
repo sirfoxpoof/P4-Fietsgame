@@ -10,6 +10,11 @@ public class MainmenuButtonFunctions : MonoBehaviour
     public Slider loadprogressSlider;
     public float progressValue;
 
+    public void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     public void QuitGame()
     {
         Application.Quit();
@@ -41,14 +46,17 @@ public class MainmenuButtonFunctions : MonoBehaviour
         loadOperation.allowSceneActivation = false;
         yield return new WaitForSeconds(2f);
         loadOperation.allowSceneActivation = true;
+        
 
         while (!loadOperation.isDone)
         {
+            
             progressValue = Mathf.Clamp01(loadOperation.progress / 0.9f);
             loadprogressSlider.value = progressValue;
             Debug.Log(progressValue);
             yield return new WaitForSeconds(3f);
             
+
         }      
     }
 

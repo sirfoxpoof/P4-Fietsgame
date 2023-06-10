@@ -12,15 +12,16 @@ public class Timer : MonoBehaviour
     void Start()
     {
         startTime = Time.deltaTime;
+        
     }
 
-    void Update()
+    private void Update()
     {
         if (finishScript.crossedFinish == true)
         {
             return;
         }
-
+        
         else
         {
             time = Time.time - startTime;
@@ -29,6 +30,8 @@ public class Timer : MonoBehaviour
             seconds = (time % 60).ToString("f1");
 
             timerText.text = minutes + ":" + seconds;
+
+            
         }
 
        

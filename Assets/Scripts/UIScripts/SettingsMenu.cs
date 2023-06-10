@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public GameObject settingsPanel;
+    public GameObject settingsPanel, RUSure;
 
     public void Start()
     {
         settingsPanel.gameObject.SetActive(false);
+        RUSure.SetActive(false);
     }
 
     public void Update()
@@ -36,5 +37,17 @@ public class SettingsMenu : MonoBehaviour
         settingsPanel.gameObject.SetActive(false);
         
     }
+
+    public void USureBuddy()
+    {
+        RUSure.SetActive(true);
+    }
+
+    public void TerugNaarMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+
 
 }
