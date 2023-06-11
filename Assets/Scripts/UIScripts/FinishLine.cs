@@ -17,7 +17,8 @@ public class FinishLine : MonoBehaviour
     
     public void OnTriggerEnter(Collider other)
     {
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Time.timeScale = 0;
         crossedFinish = true;
         finishScherm.SetActive(true);
