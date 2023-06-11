@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
         
         else
         {
-            time = Time.time - startTime;
+            time = Time.timeSinceLevelLoad - startTime;
 
             minutes = ((int)time / 60).ToString();
             seconds = (time % 60).ToString("f1");

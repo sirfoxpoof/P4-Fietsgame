@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SettingsMenu : MonoBehaviour
 {
     public GameObject settingsPanel, RUSure;
+    
 
     public void Start()
     {
@@ -17,17 +18,11 @@ public class SettingsMenu : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
-            PauseGame();
+            Cursor.lockState = CursorLockMode.Confined;
+            Time.timeScale = 0;
+            settingsPanel.gameObject.SetActive(true);
+            
         }
-    }
-
-    public void PauseGame()
-    {
-        Time.timeScale = 0;
-        settingsPanel.gameObject.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-
-
     }
 
     public void ResumeGame()

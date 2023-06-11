@@ -7,18 +7,23 @@ public class FinishLine : MonoBehaviour
 {
     public bool crossedFinish;
     public GameObject finishScherm;
+    public Animator fietsJump;
 
     private void Start()
     {
         crossedFinish = false;
         finishScherm.SetActive(false);
     }
+    
     public void OnTriggerEnter(Collider other)
     {
-        crossedFinish = true;
-        finishScherm.SetActive(true);
         Cursor.lockState = CursorLockMode.Confined;
         Time.timeScale = 0;
+        crossedFinish = true;
+        finishScherm.SetActive(true);
+        fietsJump.Play("WinAnimatie");
+
+
 
     }
 
