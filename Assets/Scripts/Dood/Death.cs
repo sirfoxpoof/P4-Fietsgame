@@ -6,14 +6,14 @@ using UnityEngine;
 public class Death : MonoBehaviour
 {
     public Wasd wasd;
-    public Canvas deathScreen;
+    public GameObject deathScreen;
     public MouseLock mousLock;
     public Transform respawn, player, cam;
 
 
     private void Start()
     {
-        deathScreen.GetComponent <Canvas> ().enabled = false;
+        deathScreen.SetActive(false);
     }//canvas staat standaard uit
    
     private void OnCollisionEnter(Collision collisionInfo)
@@ -21,7 +21,7 @@ public class Death : MonoBehaviour
         if (collisionInfo.collider.tag == "Obstacle")
         {
             wasd.enabled = false;
-            deathScreen.enabled = true;
+            deathScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }

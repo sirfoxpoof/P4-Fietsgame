@@ -13,4 +13,10 @@ public class VolumeSet : MonoBehaviour
 
     }
 
+    public void SetVolumeLevelGame(float sliderValue)
+    {
+        mixer.SetFloat("GameVolume", Mathf.Log10(sliderValue) * 20);
+
+    }
+
 }

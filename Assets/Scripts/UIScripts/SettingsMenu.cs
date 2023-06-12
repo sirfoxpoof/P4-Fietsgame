@@ -43,6 +43,12 @@ public class SettingsMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void OpnieuwProberen()
+    {
+        SceneManager.LoadScene("TutorialLevelScene");
+        Time.timeScale = 1;
+    }
+
 
 
 }
