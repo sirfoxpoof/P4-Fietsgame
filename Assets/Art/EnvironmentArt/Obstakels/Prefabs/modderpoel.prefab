@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7790333889946911340}
   - component: {fileID: 5474165119370524326}
   - component: {fileID: 2904094847432794941}
+  - component: {fileID: 6076475595458452171}
   m_Layer: 0
   m_Name: modderpoel
   m_TagString: Mud
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5834651206962009971}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4260523, y: 0, z: 1.2377973}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -96,3 +97,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb292b879555df64ba055311703b5193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6076475595458452171
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834651206962009971}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.086504, y: 0.9427442, z: 1.3651664}
+  m_Center: {x: -0.016432226, y: -0.2213721, z: 0.001578182}

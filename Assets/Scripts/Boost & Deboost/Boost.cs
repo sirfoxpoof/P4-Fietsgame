@@ -27,7 +27,6 @@ public class Boost : MonoBehaviour
 
         yield return new WaitForSeconds(2.5f);
 
-        wasd.speed += mudDeboost;
     }
     private IEnumerator WindBoost()
     {
