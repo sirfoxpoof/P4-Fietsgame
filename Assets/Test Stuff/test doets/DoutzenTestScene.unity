@@ -5686,7 +5686,7 @@ GameObject:
   - component: {fileID: 750111588}
   m_Layer: 0
   m_Name: deboost cube
-  m_TagString: Deboost
+  m_TagString: Mud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6186,8 +6186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca929345aa676d458eace19c86fad73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedBoost: 0
-  wasd: {fileID: 0}
+  mudDeboost: 50
+  speedBoost: 40
+  wasd: {fileID: 1015216967}
 --- !u!114 &1015216969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6446,7 +6447,7 @@ GameObject:
   - component: {fileID: 1178385474}
   m_Layer: 0
   m_Name: boost cube
-  m_TagString: Boost
+  m_TagString: Wind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6541,6 +6542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca929345aa676d458eace19c86fad73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mudDeboost: 0
   speedBoost: 50
   wasd: {fileID: 1015216967}
 --- !u!1 &1200963312
