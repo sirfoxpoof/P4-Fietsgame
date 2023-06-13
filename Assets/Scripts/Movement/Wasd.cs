@@ -16,6 +16,8 @@ public class Wasd : MonoBehaviour
     private bool sCIncreaseSpeed = false;
     private bool sCDecreaseSpeed = false;
 
+    public float boostFactor = 1f;
+
     private PlayerInput playerInput;
     private InputAction rotation;
 
@@ -24,13 +26,13 @@ public class Wasd : MonoBehaviour
     private string rawData = "";
     private int wheelValue = 0;
     private int ringValue = 0;
-    private float specialControllerSpeed = 0;
+    public float specialControllerSpeed = 0;
     private float specialControllerValue = 0;
     public float specialControllerSensitivity = 1;
     private bool specialControllerActive = false;
 
     // change your serial port
-    SerialPort serialPort = new SerialPort("COM7", 9600);
+    public SerialPort serialPort = new SerialPort("COM5", 9600);
 
 
     private void Awake()
@@ -43,7 +45,7 @@ public class Wasd : MonoBehaviour
     void Start()
     {
         serialPort.Open();
-        serialPort.ReadTimeout = 100; // In my case, 100 was a good amount to allow quite smooth transition. 
+        serialPort.ReadTimeout = 100; // In my case, 100 was a good amount to allow quite smooth transition. praat fucking nederlands hoer
     }
     private void OnEnable()
     {
@@ -140,7 +142,7 @@ public class Wasd : MonoBehaviour
 
             }
 
-            transform.Translate(transform.forward * specialControllerSpeed * specialControllerSensitivity * Time.deltaTime, Space.World);
+            transform.Translate(((transform.forward * specialControllerSpeed * specialControllerSensitivity) * boostFactor) * Time.deltaTime, Space.World);
 
         }
 

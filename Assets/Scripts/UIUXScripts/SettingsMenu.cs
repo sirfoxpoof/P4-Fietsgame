@@ -18,7 +18,8 @@ public class SettingsMenu : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
-            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             Time.timeScale = 0;
             settingsPanel.gameObject.SetActive(true);
             

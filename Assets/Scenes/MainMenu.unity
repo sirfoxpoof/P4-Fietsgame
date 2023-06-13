@@ -524,10 +524,13 @@ MonoBehaviour:
     Fietsbel
 
 
-    Interact
+    Vooruit / Achteruit
 
 
-    Mouselock
+    Vooruit
+
+
+    Sturen
 
 '
   m_isRightToLeft: 0
@@ -2676,10 +2679,13 @@ MonoBehaviour:
     Q
 
 
-    E
+    W / S
 
 
-    1'
+    Trappers
+
+
+    Muis'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaa8e16060cc77f44a1379546c52f082, type: 2}
   m_sharedMaterial: {fileID: 1118361233956903541, guid: aaa8e16060cc77f44a1379546c52f082, type: 2}
@@ -3826,7 +3832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Keybinds
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaa8e16060cc77f44a1379546c52f082, type: 2}
   m_sharedMaterial: {fileID: 1118361233956903541, guid: aaa8e16060cc77f44a1379546c52f082, type: 2}
@@ -9942,7 +9948,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Keybinds
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaa8e16060cc77f44a1379546c52f082, type: 2}
   m_sharedMaterial: {fileID: 1118361233956903541, guid: aaa8e16060cc77f44a1379546c52f082, type: 2}

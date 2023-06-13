@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using System.IO.Ports;
+
 
 public class Death : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class Death : MonoBehaviour
     {
         if (collisionInfo.collider.tag == "Obstacle")
         {
+            wasd.serialPort.Close();
             wasd.enabled = false;
             deathScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;

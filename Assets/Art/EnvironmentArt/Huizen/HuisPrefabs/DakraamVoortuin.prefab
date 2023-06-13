@@ -157,6 +157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HuisDakraam
       objectReference: {fileID: 0}
+    - target: {fileID: 6691394127309640426, guid: 128dca15f1042af498cc114b052afe54, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 128dca15f1042af498cc114b052afe54, type: 3}
 --- !u!4 &6421461630453260563 stripped

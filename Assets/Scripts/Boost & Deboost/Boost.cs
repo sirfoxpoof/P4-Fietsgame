@@ -1,4 +1,5 @@
 using System.Collections;
+using System.IO.Ports;
 using UnityEngine;
 
 public class Boost : MonoBehaviour
@@ -18,19 +19,27 @@ public class Boost : MonoBehaviour
         {
             StartCoroutine(WindBoost());
         }
+
+
     }
+
+
 
 
     private IEnumerator MudBoost()
     {
-        wasd.speed -= mudDeboost;
+        wasd.speed *= mudDeboost;
+        wasd.boostFactor *= .5f;
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1.5f);
+
+        wasd.boostFactor = 1f;
 
     }
     private IEnumerator WindBoost()
     {
         wasd.speed += speedBoost;
+        //wasd.specialControllerSpeed += speedBoost;
 
         yield return new WaitForSeconds(1.5f);
 

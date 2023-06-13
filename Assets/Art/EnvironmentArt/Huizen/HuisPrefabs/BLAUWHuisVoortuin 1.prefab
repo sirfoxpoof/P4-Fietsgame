@@ -153,10 +153,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Huis
       objectReference: {fileID: 0}
-    - target: {fileID: 6209437353669356705, guid: 4ece097c4bcd0b04e91d17ba2a2156f9, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 164b9c3d938dce54eae0db0a2bc5650e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ece097c4bcd0b04e91d17ba2a2156f9, type: 3}
 --- !u!4 &1640120412658643964 stripped
