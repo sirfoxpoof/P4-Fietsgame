@@ -306,7 +306,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: LevelSelected
+            m_StringArgument: LevelSpriteAnimation
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 1
@@ -322,7 +322,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: LevelSpriteAnimation
+            m_StringArgument: LevelSelected
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &34435739
@@ -1635,6 +1635,22 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: StartAnimation
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 268878294}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: PressAnimation
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &293231354
@@ -6083,6 +6099,22 @@ MonoBehaviour:
             m_StringArgument: StartAnimation
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1297602549}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: PressAnimation
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1347282450
 GameObject:
   m_ObjectHideFlags: 0
@@ -6737,6 +6769,7 @@ GameObject:
   - component: {fileID: 1519355693}
   - component: {fileID: 1519355697}
   - component: {fileID: 1519355696}
+  - component: {fileID: 1519355698}
   m_Layer: 5
   m_Name: EindButton
   m_TagString: Untagged
@@ -6885,7 +6918,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: LevelSelected
+            m_StringArgument: LevelSpriteAnimation
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 1
@@ -6901,7 +6934,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: LevelSpriteAnimation
+            m_StringArgument: LevelSelected
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!95 &1519355697
@@ -6925,6 +6958,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1519355698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519355691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4174d484901e8d645829a5b29156b205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1530262888
 GameObject:
   m_ObjectHideFlags: 0
@@ -9138,6 +9183,22 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: StartAnimation
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1868409223}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: PressAnimation
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1870007382

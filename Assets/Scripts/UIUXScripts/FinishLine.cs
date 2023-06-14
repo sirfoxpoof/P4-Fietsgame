@@ -19,10 +19,10 @@ public class FinishLine : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        Time.timeScale = 0;
+        fietsJump.Play("WinAnimatie");
         crossedFinish = true;
         finishScherm.SetActive(true);
-        fietsJump.Play("WinAnimatie");
+        
 
 
 
