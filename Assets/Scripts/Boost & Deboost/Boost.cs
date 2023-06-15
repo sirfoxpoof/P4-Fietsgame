@@ -23,9 +23,6 @@ public class Boost : MonoBehaviour
 
     }
 
-
-
-
     private IEnumerator MudBoost()
     {
         wasd.speed *= mudDeboost;
