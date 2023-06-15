@@ -8,6 +8,7 @@ TagManager:
   - Mud
   - Wind
   - GaTerug
+  - FinishCube
   layers:
   - Default
   - TransparentFX
