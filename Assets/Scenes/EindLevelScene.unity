@@ -5831,7 +5831,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7bb300640a9f1479480c12f09b9312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameWon: 0
   levelNumberSave: 2
+  wasd: {fileID: 1929726847}
 --- !u!114 &1929726844
 MonoBehaviour:
   m_ObjectHideFlags: 0
