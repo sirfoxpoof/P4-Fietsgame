@@ -11,8 +11,7 @@ public class WinGame : MonoBehaviour
     {
         gameWon = true;
         wasd.enabled = false;
-        print("you win!");
-      
+        print("you win");
     }
 
     private void Update()
