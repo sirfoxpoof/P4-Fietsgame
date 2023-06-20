@@ -80,6 +80,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SkipSplash"",
+                    ""type"": ""Button"",
+                    ""id"": ""eb5cd9da-13e6-49f3-a025-b00452e1a74e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -109,17 +118,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""3ef403de-66ab-4e59-a2f5-f6bd1ca913e4"",
                     ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Rotation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""fb3996f1-7730-4996-be1e-cf030451097c"",
-                    ""path"": ""<Joystick>/stick/x"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -159,6 +157,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Fietsbel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1ad13e3f-b218-4b87-9edd-8be2f31e8ca4"",
+                    ""path"": ""<Keyboard>/numpadMinus"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SkipSplash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -173,6 +182,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Default_SwitchCamera = m_Default.FindAction("SwitchCamera", throwIfNotFound: true);
         m_Default_MouseLock = m_Default.FindAction("MouseLock", throwIfNotFound: true);
         m_Default_Fietsbel = m_Default.FindAction("Fietsbel", throwIfNotFound: true);
+        m_Default_SkipSplash = m_Default.FindAction("SkipSplash", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -240,6 +250,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Default_SwitchCamera;
     private readonly InputAction m_Default_MouseLock;
     private readonly InputAction m_Default_Fietsbel;
+    private readonly InputAction m_Default_SkipSplash;
     public struct DefaultActions
     {
         private @PlayerInput m_Wrapper;
@@ -250,6 +261,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @SwitchCamera => m_Wrapper.m_Default_SwitchCamera;
         public InputAction @MouseLock => m_Wrapper.m_Default_MouseLock;
         public InputAction @Fietsbel => m_Wrapper.m_Default_Fietsbel;
+        public InputAction @SkipSplash => m_Wrapper.m_Default_SkipSplash;
         public InputActionMap Get() { return m_Wrapper.m_Default; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -277,6 +289,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Fietsbel.started += instance.OnFietsbel;
             @Fietsbel.performed += instance.OnFietsbel;
             @Fietsbel.canceled += instance.OnFietsbel;
+            @SkipSplash.started += instance.OnSkipSplash;
+            @SkipSplash.performed += instance.OnSkipSplash;
+            @SkipSplash.canceled += instance.OnSkipSplash;
         }
 
         private void UnregisterCallbacks(IDefaultActions instance)
@@ -299,6 +314,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Fietsbel.started -= instance.OnFietsbel;
             @Fietsbel.performed -= instance.OnFietsbel;
             @Fietsbel.canceled -= instance.OnFietsbel;
+            @SkipSplash.started -= instance.OnSkipSplash;
+            @SkipSplash.performed -= instance.OnSkipSplash;
+            @SkipSplash.canceled -= instance.OnSkipSplash;
         }
 
         public void RemoveCallbacks(IDefaultActions instance)
@@ -324,5 +342,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnSwitchCamera(InputAction.CallbackContext context);
         void OnMouseLock(InputAction.CallbackContext context);
         void OnFietsbel(InputAction.CallbackContext context);
+        void OnSkipSplash(InputAction.CallbackContext context);
     }
 }
