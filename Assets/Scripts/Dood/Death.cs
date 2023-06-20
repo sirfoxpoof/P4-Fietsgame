@@ -9,15 +9,40 @@ public class Death : MonoBehaviour
 {
     public Wasd wasd;
     public GameObject deathScreen;
-    public MouseLock mousLock;
     public Transform respawn, player, cam;
+
+    private int lives = 1;
 
 
     private void Start()
     {
         deathScreen.SetActive(false);
     }//canvas staat standaard uit
-   
+
+    private void Update()
+    {
+        if (lives < 0)
+        {
+            lives = 0;
+
+            if (lives == 0)
+            {
+                wasd.serialPort.Close();
+                wasd.enabled = false;
+                deathScreen.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("NearDeath"))
+        {
+            lives -= 1;
+        }
+    }
     private void OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.collider.tag == "Obstacle")
@@ -29,6 +54,7 @@ public class Death : MonoBehaviour
             Cursor.visible = true;
         }
     }
+  
     public void RespawnButton()
     {
         player.transform.position = respawn.position;
@@ -39,4 +65,5 @@ public class Death : MonoBehaviour
         player.transform.eulerAngles = new Vector3(0, 180, 0);
         cam.transform.rotation = Quaternion.Euler(0, 180, 0);
     }
+    
 }
