@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class SettingsMenu : MonoBehaviour
 {
     public GameObject settingsPanel, RUSure;
-    
+    public bool settingsAan = false;
+
 
     public void Start()
     {
@@ -14,16 +16,39 @@ public class SettingsMenu : MonoBehaviour
         RUSure.SetActive(false);
     }
 
-    public void Update()
+  
+    public void DoSettingsMenu (InputAction.CallbackContext context)
     {
-        if (Input.GetKeyDown("escape"))
+        if (context.performed)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            Time.timeScale = 0;
-            settingsPanel.gameObject.SetActive(true);
+            if (!settingsAan)
+            {
+                SettingsMenuOn();
+            }
             
+            else
+            {
+                SettingsMenuOff();
+            }
+            settingsAan = !settingsAan;
         }
+    }
+
+    public void SettingsMenuOn()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        settingsPanel.gameObject.SetActive(true);
+        Time.timeScale = 0;
+
+    }
+
+    public void SettingsMenuOff()
+    {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Time.timeScale = 1;
+            settingsPanel.gameObject.SetActive(false);
     }
 
     public void ResumeGame()

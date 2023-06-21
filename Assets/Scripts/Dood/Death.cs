@@ -8,7 +8,7 @@ using System.IO.Ports;
 public class Death : MonoBehaviour
 {
     public Wasd wasd;
-    public GameObject deathScreen;
+    public GameObject deathScreen, fietssprite1, fietssprite2;
     public Transform respawn, player, cam;
 
     private int lives = 1;
@@ -17,6 +17,9 @@ public class Death : MonoBehaviour
     private void Start()
     {
         deathScreen.SetActive(false);
+        fietssprite1.SetActive(true);
+        fietssprite2.SetActive(true);
+
     }//canvas staat standaard uit
 
     private void Update()
@@ -41,6 +44,8 @@ public class Death : MonoBehaviour
         if (other.gameObject.CompareTag("NearDeath"))
         {
             lives -= 1;
+            fietssprite1.SetActive(false);
+
         }
     }
     private void OnCollisionEnter(Collision collisionInfo)
