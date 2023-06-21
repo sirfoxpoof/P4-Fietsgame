@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8462586713457886063}
   m_Layer: 0
   m_Name: VoortuinBoom
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

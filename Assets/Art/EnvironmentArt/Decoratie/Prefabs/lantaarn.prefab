@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7881148084434228984}
   - component: {fileID: 6552928740584511837}
   - component: {fileID: 9012928473062976919}
+  - component: {fileID: 7272952850594518554}
   m_Layer: 0
   m_Name: lantaarn
   m_TagString: NearDeath
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7272952850594518554
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355687441950542914}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2813425, y: 3.9999995, z: 0.3}
+  m_Center: {x: 0.0021179393, y: 1.9999995, z: 0}
