@@ -89,6 +89,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NextConvo"",
+                    ""type"": ""Button"",
+                    ""id"": ""79f6ddc1-8923-4a20-b50b-ee70e0d263a6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -168,6 +177,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""SkipSplash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1e4c8c6e-1fbe-4b64-9333-6c8d268d4484"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextConvo"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -183,6 +203,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Default_MouseLock = m_Default.FindAction("MouseLock", throwIfNotFound: true);
         m_Default_Fietsbel = m_Default.FindAction("Fietsbel", throwIfNotFound: true);
         m_Default_SkipSplash = m_Default.FindAction("SkipSplash", throwIfNotFound: true);
+        m_Default_NextConvo = m_Default.FindAction("NextConvo", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -251,6 +272,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Default_MouseLock;
     private readonly InputAction m_Default_Fietsbel;
     private readonly InputAction m_Default_SkipSplash;
+    private readonly InputAction m_Default_NextConvo;
     public struct DefaultActions
     {
         private @PlayerInput m_Wrapper;
@@ -262,6 +284,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @MouseLock => m_Wrapper.m_Default_MouseLock;
         public InputAction @Fietsbel => m_Wrapper.m_Default_Fietsbel;
         public InputAction @SkipSplash => m_Wrapper.m_Default_SkipSplash;
+        public InputAction @NextConvo => m_Wrapper.m_Default_NextConvo;
         public InputActionMap Get() { return m_Wrapper.m_Default; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -292,6 +315,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SkipSplash.started += instance.OnSkipSplash;
             @SkipSplash.performed += instance.OnSkipSplash;
             @SkipSplash.canceled += instance.OnSkipSplash;
+            @NextConvo.started += instance.OnNextConvo;
+            @NextConvo.performed += instance.OnNextConvo;
+            @NextConvo.canceled += instance.OnNextConvo;
         }
 
         private void UnregisterCallbacks(IDefaultActions instance)
@@ -317,6 +343,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SkipSplash.started -= instance.OnSkipSplash;
             @SkipSplash.performed -= instance.OnSkipSplash;
             @SkipSplash.canceled -= instance.OnSkipSplash;
+            @NextConvo.started -= instance.OnNextConvo;
+            @NextConvo.performed -= instance.OnNextConvo;
+            @NextConvo.canceled -= instance.OnNextConvo;
         }
 
         public void RemoveCallbacks(IDefaultActions instance)
@@ -343,5 +372,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnMouseLock(InputAction.CallbackContext context);
         void OnFietsbel(InputAction.CallbackContext context);
         void OnSkipSplash(InputAction.CallbackContext context);
+        void OnNextConvo(InputAction.CallbackContext context);
     }
 }
