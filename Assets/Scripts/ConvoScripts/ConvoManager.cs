@@ -9,6 +9,7 @@ public class ConvoManager : MonoBehaviour
     public Wasd wasd;
     public Convo convo;
     public Timer timer;
+    public GameObject dialougebalk;
 
     public TMP_Text text;
     private int conversationPlus;
@@ -40,6 +41,7 @@ public class ConvoManager : MonoBehaviour
                 text.gameObject.SetActive(false);
                 conversationPlus = 0;
                 timer.enabled = true;
+                dialougebalk.SetActive(false);
             }
         }
     }

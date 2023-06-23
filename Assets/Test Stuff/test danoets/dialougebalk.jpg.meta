@@ -108,12 +108,12 @@ TextureImporter:
       name: dialougebalk_0
       rect:
         serializedVersion: 2
-        x: 341
-        y: 19
-        width: 1173
-        height: 274
+        x: 365
+        y: 47
+        width: 1116
+        height: 221
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 83, y: 88, z: 146, w: 97}
       outline: []
       physicsShape: []

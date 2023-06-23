@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6607634907750862281}
   - component: {fileID: 7790333889946911340}
   - component: {fileID: 5474165119370524326}
-  - component: {fileID: 2904094847432794941}
   - component: {fileID: 6076475595458452171}
   m_Layer: 0
   m_Name: modderpoel
@@ -85,18 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2904094847432794941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5834651206962009971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb292b879555df64ba055311703b5193, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &6076475595458452171
 BoxCollider:
   m_ObjectHideFlags: 0

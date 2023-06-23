@@ -10,6 +10,7 @@ public class Death : MonoBehaviour
     public Wasd wasd;
     public GameObject deathScreen, fietssprite1, fietssprite2;
     public Transform respawn, player, cam;
+    public AudioSource nearDeathSound, realDeath;
 
     private int lives = 1;
 
@@ -44,7 +45,8 @@ public class Death : MonoBehaviour
         if (other.gameObject.CompareTag("NearDeath"))
         {
             lives -= 1;
-            fietssprite1.SetActive(false);
+            fietssprite2.SetActive(false);
+            nearDeathSound.Play();
 
         }
     }
@@ -57,6 +59,8 @@ public class Death : MonoBehaviour
             deathScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            realDeath.Play();
+            
         }
     }
   
