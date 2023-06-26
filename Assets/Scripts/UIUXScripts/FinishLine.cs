@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FinishLine : MonoBehaviour
 {
     public bool crossedFinish;
     public GameObject finishScherm;
     public Animator fietsJump;
+
+    public Slider loadprogressSlider;
+    public float progressValue;
 
     private void Start()
     {
@@ -24,9 +28,31 @@ public class FinishLine : MonoBehaviour
         finishScherm.SetActive(true);
     }
 
-    public void NaarSelectieScherm()
+    public void NaarSelectieScherm(string levelToLoad)
     {
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(LoadLevelASync(levelToLoad));
+        SceneManager.LoadScene("MainMenuScene");
+    }
+
+    IEnumerator LoadLevelASync(string levelToLoad)
+    {
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(levelToLoad);
+
+        loadOperation.allowSceneActivation = false;
+        yield return new WaitForSeconds(2f);
+        loadOperation.allowSceneActivation = true;
+
+
+        while (!loadOperation.isDone)
+        {
+
+            progressValue = Mathf.Clamp01(loadOperation.progress / 0.9f);
+            loadprogressSlider.value = progressValue;
+            Debug.Log(progressValue);
+            yield return new WaitForSeconds(3f);
+
+
+        }
     }
 
     public void LevelOpnieuwSpelen()
