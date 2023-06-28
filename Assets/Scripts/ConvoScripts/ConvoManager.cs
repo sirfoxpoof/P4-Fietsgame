@@ -14,7 +14,12 @@ public class ConvoManager : MonoBehaviour
     public TMP_Text text, space;
     private int conversationPlus;
 
+    private bool convoDone;
+    public int byeDialouge;
+
     public TutorialScript tutorialScript;
+    public Death death;
+    public FinishLine finishLine;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +27,28 @@ public class ConvoManager : MonoBehaviour
         wasd.enabled = false;
         timer.enabled = false;
         tutorialScript.enabled = false;
+
+        convoDone = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         text.text = convo.convoText[conversationPlus];
         
+        if(PlayerPrefs.GetInt("dialougeKlaar") == byeDialouge)
+        {
+           convoDone = true;
+        }
+
+        if (convoDone && !death.dood && !finishLine.finnish)
+        {
+            dialougebalk.SetActive(false);
+            wasd.enabled = true;
+            timer.enabled = true;
+            tutorialScript.enabled = true;
+        }
     }
 
     public void ConvoNext(InputAction.CallbackContext context)
@@ -45,10 +65,13 @@ public class ConvoManager : MonoBehaviour
                 text.gameObject.SetActive(false);
                 conversationPlus = 0;
                 timer.enabled = true;
-                dialougebalk.SetActive(false);
-
+                
                 tutorialScript.enabled = true;
                 tutorialScript.tutorialPanel.SetActive(true);
+                dialougebalk.SetActive(false);
+
+                PlayerPrefs.SetInt("dialougeKlaar", 1);
+                
             }
 
             if(conversationPlus == 0)

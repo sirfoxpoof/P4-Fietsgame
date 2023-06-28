@@ -24,6 +24,7 @@ public class MainmenuButtonFunctions : MonoBehaviour
     public void StartTutorial()
     {
         SceneManager.LoadScene("TutorialLevelScene");
+        PlayerPrefs.SetInt("dialougeKlaar", 0);
 
     }
     public void StartEindLevel()

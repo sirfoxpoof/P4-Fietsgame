@@ -8,7 +8,7 @@ public class TutorialScript : MonoBehaviour
 {
     public TMP_Text w, s;
     public GameObject tutorialPanel;
-    public bool wKlaar, sKlaar;
+    private bool wKlaar, sKlaar;
 
     private void Start()
     {
@@ -23,7 +23,6 @@ public class TutorialScript : MonoBehaviour
         if(wKlaar && sKlaar)
         {
             tutorialPanel.SetActive(false);
-            print("ga uit kutding");
         }
     }
 

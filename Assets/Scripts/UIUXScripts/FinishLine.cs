@@ -13,10 +13,14 @@ public class FinishLine : MonoBehaviour
     public Slider loadprogressSlider;
     public float progressValue;
 
+    public bool finnish;
+
     private void Start()
     {
         crossedFinish = false;
         finishScherm.SetActive(false);
+
+        finnish = false;
     }
     
     public void OnTriggerEnter(Collider other)
@@ -26,6 +30,8 @@ public class FinishLine : MonoBehaviour
         fietsJump.Play("WinAnimatie");
         crossedFinish = true;
         finishScherm.SetActive(true);
+
+        finnish = true;
     }
 
     public void NaarSelectieScherm(string levelToLoad)
