@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4427056434332143022}
   - component: {fileID: 783568930222801419}
   - component: {fileID: 3259265291706070721}
+  - component: {fileID: -6557666645540880084}
   m_Layer: 0
   m_Name: Brug
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-6557666645540880084
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3907929253769500436}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.630511, y: 3.1167564, z: 17.999962}
+  m_Center: {x: 0, y: 1.539321, z: 0}

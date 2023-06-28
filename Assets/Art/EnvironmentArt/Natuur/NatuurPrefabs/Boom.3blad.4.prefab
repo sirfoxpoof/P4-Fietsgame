@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8078157260264512447}
   - component: {fileID: 5166959934218179610}
   - component: {fileID: 6940132679737204944}
+  - component: {fileID: 8369301771973840480}
   m_Layer: 0
   m_Name: Boom.3blad.4
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8369301771973840480
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8885797326556184837}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5743093, y: 3.9999874, z: 2.1183496}
+  m_Center: {x: -0.16206324, y: 1.9999937, z: 0.033931255}

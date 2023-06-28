@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4122526339984537003}
   - component: {fileID: 1052149376047593998}
   - component: {fileID: 2989557829182410436}
+  - component: {fileID: 5759608559219224894}
   m_Layer: 0
   m_Name: MediumSteen
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5759608559219224894
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3638336141595799313}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5501572, y: 0.3499992, z: 0.67192245}
+  m_Center: {x: 0.0011086166, y: 0.1600011, z: 0.009908646}

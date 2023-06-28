@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        startTime = Time.deltaTime;
+        startTime = Time.time;
         
     }
 
@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
         
         else
         {
-            time = Time.timeSinceLevelLoad - startTime;
+            time = Time.time - startTime;
 
             minutes = ((int)time / 60).ToString();
             seconds = (time % 60).ToString("f1");

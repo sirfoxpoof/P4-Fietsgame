@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12146, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: NewBrush 1
+  m_EditorClassIdentifier: 
+  m_Mask: {fileID: 2800000, guid: aa7be84a92da42d42bffb1dbc1008385, type: 3}
+  m_Falloff:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.008333334
+      value: 0.4406241
+      inSlope: 0.2772715
+      outSlope: 0.2772715
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.2767815
+    - serializedVersion: 3
+      time: 0.9416809
+      value: 0.04098612
+      inSlope: -1.1536118
+      outSlope: -1.1536118
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.10416669
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_RadiusScale: 1.4849247
+  m_BlackWhiteRemapMin: 0
+  m_BlackWhiteRemapMax: 0.67330194
+  m_InvertRemapRange: 0
