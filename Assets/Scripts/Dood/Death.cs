@@ -12,6 +12,8 @@ public class Death : MonoBehaviour
     public Transform respawn, player, cam;
     public AudioSource nearDeathSound, realDeath;
 
+    public bool dood;
+
     private int lives = 1;
 
 
@@ -20,6 +22,8 @@ public class Death : MonoBehaviour
         deathScreen.SetActive(false);
         fietssprite1.SetActive(true);
         fietssprite2.SetActive(true);
+
+        dood = false;
 
     }//canvas staat standaard uit
 
@@ -36,6 +40,7 @@ public class Death : MonoBehaviour
                 deathScreen.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                dood = true;
             }
         }
     }
@@ -60,6 +65,8 @@ public class Death : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             realDeath.Play();
+
+            dood = true;
             
         }
     }

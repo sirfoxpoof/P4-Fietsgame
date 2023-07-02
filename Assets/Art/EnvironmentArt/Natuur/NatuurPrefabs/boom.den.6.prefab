@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3534074491088862247}
   - component: {fileID: 478601551281255298}
   - component: {fileID: 2396094062554842952}
+  - component: {fileID: -2412782595345192092}
   m_Layer: 0
   m_Name: boom.den.6
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-2412782595345192092
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4197458940733073053}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8796334, y: 5.9999986, z: 2.8796334}
+  m_Center: {x: 0, y: 2.9999993, z: -0.000000059604645}

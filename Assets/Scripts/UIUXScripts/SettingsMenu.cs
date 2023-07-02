@@ -9,6 +9,7 @@ public class SettingsMenu : MonoBehaviour
     public GameObject settingsPanel, RUSure;
     public bool settingsAan = false;
 
+    public ConvoManager convo;
 
     public void Start()
     {
@@ -41,14 +42,20 @@ public class SettingsMenu : MonoBehaviour
         settingsPanel.gameObject.SetActive(true);
         Time.timeScale = 0;
 
+        convo.dialougebalk.SetActive(false);
     }
 
     public void SettingsMenuOff()
     {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            Time.timeScale = 1;
-            settingsPanel.gameObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1;
+        settingsPanel.gameObject.SetActive(false);
+
+        if (PlayerPrefs.GetInt("dialougeKlaar") < convo.byeDialouge)
+        {
+            convo.dialougebalk.SetActive(true);
+        }
     }
 
     public void ResumeGame()
@@ -56,7 +63,13 @@ public class SettingsMenu : MonoBehaviour
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         settingsPanel.gameObject.SetActive(false);
-        
+
+        if (PlayerPrefs.GetInt("dialougeKlaar") < convo.byeDialouge)
+        {
+            convo.dialougebalk.SetActive(true);
+        }
+            
+
     }
 
     public void USureBuddy()
@@ -67,6 +80,7 @@ public class SettingsMenu : MonoBehaviour
     public void TerugNaarMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        PlayerPrefs.SetInt("dialougeKlaar", 0);
     }
 
     public void OpnieuwProberen()
