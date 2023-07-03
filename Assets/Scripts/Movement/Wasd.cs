@@ -29,7 +29,7 @@ public class Wasd : MonoBehaviour
     public float specialControllerSpeed = 0;
     private float specialControllerValue = 0;
     public float specialControllerSensitivity = 1;
-    private bool specialControllerActive = false;
+    public bool specialControllerActive = false;
 
     // change your serial port
     public SerialPort serialPort = new SerialPort("COM5", 9600);

@@ -14,7 +14,7 @@ public class ConvoManager : MonoBehaviour
     public TMP_Text text, space;
     private int conversationPlus;
 
-    private bool convoDone;
+    public bool convoDone;
     public int byeDialouge;
 
     public TutorialScript tutorialScript;
@@ -48,6 +48,7 @@ public class ConvoManager : MonoBehaviour
             wasd.enabled = true;
             timer.enabled = true;
             tutorialScript.enabled = true;
+            tutorialScript.tutorialAan = true;
         }
     }
 
@@ -64,7 +65,7 @@ public class ConvoManager : MonoBehaviour
                 wasd.enabled = true;
                 text.gameObject.SetActive(false);
                 conversationPlus = 0;
-                timer.enabled = true;
+                
                 
                 tutorialScript.enabled = true;
                 tutorialScript.tutorialPanel.SetActive(true);
@@ -77,7 +78,7 @@ public class ConvoManager : MonoBehaviour
             if(conversationPlus == 0)
             {
                 space.gameObject.SetActive(true);
-                space.text = ("Press space bar to continue");
+                space.text = ("druk op de spatiebalk om verder te gaan");
             }
             else
             {

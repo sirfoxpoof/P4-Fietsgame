@@ -10,6 +10,7 @@ public class SettingsMenu : MonoBehaviour
     public bool settingsAan = false;
 
     public ConvoManager convo;
+    public TutorialScript tutorial;
 
     public void Start()
     {
@@ -42,8 +43,17 @@ public class SettingsMenu : MonoBehaviour
         settingsPanel.gameObject.SetActive(true);
         Time.timeScale = 0;
 
-        convo.dialougebalk.SetActive(false);
+        if (!convo.convoDone)
+        {
+            convo.dialougebalk.SetActive(false);
+        }
+
+        if (tutorial.tutorialAan)
+        {
+            tutorial.tutorialPanel.SetActive(false);
+        }
     }
+    
 
     public void SettingsMenuOff()
     {
@@ -54,7 +64,15 @@ public class SettingsMenu : MonoBehaviour
 
         if (PlayerPrefs.GetInt("dialougeKlaar") < convo.byeDialouge)
         {
-            convo.dialougebalk.SetActive(true);
+            if (!convo.convoDone) 
+            { 
+                convo.dialougebalk.SetActive(true);
+            }
+        }
+
+        if (tutorial.tutorialAan)
+        {
+            tutorial.tutorialPanel.SetActive(true);
         }
     }
 
@@ -66,9 +84,16 @@ public class SettingsMenu : MonoBehaviour
 
         if (PlayerPrefs.GetInt("dialougeKlaar") < convo.byeDialouge)
         {
-            convo.dialougebalk.SetActive(true);
+            if (!convo.convoDone)
+            {
+                convo.dialougebalk.SetActive(true);
+            }
         }
-            
+
+        if (tutorial.tutorialAan)
+        {
+            tutorial.tutorialPanel.SetActive(true);
+        }
 
     }
 
