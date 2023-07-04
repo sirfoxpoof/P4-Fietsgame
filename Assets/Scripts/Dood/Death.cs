@@ -12,18 +12,19 @@ public class Death : MonoBehaviour
     public Transform respawn, player, cam;
     public AudioSource nearDeathSound, realDeath, waterDood;
 
-    public bool dood;
+    public bool dood, respawnn;
 
     private int lives = 1;
 
-
+    public TutorialScript tuut;
+    public ConvoManager convo;
     private void Start()
     {
         deathScreen.SetActive(false);
         fietssprite1.SetActive(true);
         fietssprite2.SetActive(true);
 
-        dood = false;
+        dood = false;  
 
     }//canvas staat standaard uit
 
@@ -40,9 +41,21 @@ public class Death : MonoBehaviour
                 deathScreen.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+
                 dood = true;
             }
         }
+
+        if (dood)
+        {
+            PlayerPrefs.SetInt("TutorialShow", 1);
+
+            if (PlayerPrefs.GetInt("TutorialShow") == convo.toturial && convo.convoDone)
+            {
+                tuut.tutorialPanel.gameObject.SetActive(false);
+            }
+        }
+       
     }
 
     private void OnTriggerEnter(Collider other)
@@ -67,7 +80,6 @@ public class Death : MonoBehaviour
             realDeath.Play();
 
             dood = true;
-            
         }
 
         if (collisionInfo.collider.tag == "WaterDood")
@@ -84,8 +96,6 @@ public class Death : MonoBehaviour
         }
     }
 
-
-  
     public void RespawnButton()
     {
         player.transform.position = respawn.position;
@@ -95,6 +105,8 @@ public class Death : MonoBehaviour
         Cursor.visible = false;
         player.transform.eulerAngles = new Vector3(0, 180, 0);
         cam.transform.rotation = Quaternion.Euler(0, 180, 0);
+        respawnn = true;
+
     }
     
 }

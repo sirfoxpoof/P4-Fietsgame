@@ -11,10 +11,12 @@ public class TutorialScript : MonoBehaviour
     private bool wKlaar, sKlaar, muisKlaar;
     public bool tutorialAan;
 
+    public int tutoBezig;
+
     public Wasd wasd;
     public ConvoManager convoManager;
 
-    private void Start()
+    private void Awake()
     {
         w.gameObject.SetActive(true);
         s.gameObject.SetActive(true);
@@ -37,7 +39,9 @@ public class TutorialScript : MonoBehaviour
 
     private void Update()
     {
-        if(wKlaar && sKlaar)
+       
+
+        if (wKlaar && sKlaar)
         {
             muis.gameObject.SetActive(true);
             StopCoroutine(TutorialTijdS());

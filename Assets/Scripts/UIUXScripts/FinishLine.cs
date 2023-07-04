@@ -6,14 +6,16 @@ using UnityEngine.UI;
 
 public class FinishLine : MonoBehaviour
 {
-    public bool crossedFinish;
+    public bool crossedFinish, finnish;
     public GameObject finishScherm;
     public Animator fietsJump;
 
     public Slider loadprogressSlider;
     public float progressValue;
 
-    public bool finnish;
+    
+
+    public TutorialScript tuto;
 
     private void Start()
     {
@@ -31,7 +33,7 @@ public class FinishLine : MonoBehaviour
         crossedFinish = true;
         finishScherm.SetActive(true);
         
-
+        tuto.tutorialPanel.SetActive(false); 
         finnish = true;
     }
 

@@ -15,7 +15,7 @@ public class ConvoManager : MonoBehaviour
     private int conversationPlus;
 
     public bool convoDone;
-    public int byeDialouge;
+    public int byeDialouge, toturial;
 
     public TutorialScript tutorialScript;
     public Death death;
@@ -29,6 +29,8 @@ public class ConvoManager : MonoBehaviour
         tutorialScript.enabled = false;
 
         convoDone = false;
+
+        PlayerPrefs.SetInt("TutorialShow", 1);
     }
 
     // Update is called once per frame
@@ -50,6 +52,17 @@ public class ConvoManager : MonoBehaviour
             tutorialScript.enabled = true;
             tutorialScript.tutorialAan = true;
         }
+
+        if (!convoDone)
+        {
+            PlayerPrefs.SetInt("TutorialShow", 0);
+        }
+
+        if (PlayerPrefs.GetInt("TutorialShow") == toturial)
+        {
+            tutorialScript.tutorialPanel.gameObject.SetActive(true);
+        }
+
     }
 
     public void ConvoNext(InputAction.CallbackContext context)

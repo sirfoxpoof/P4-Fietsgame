@@ -48,10 +48,15 @@ public class SettingsMenu : MonoBehaviour
             convo.dialougebalk.SetActive(false);
         }
 
-        if (tutorial.tutorialAan)
+        
+        PlayerPrefs.SetInt("TutorialShow", 0);
+
+
+        if (PlayerPrefs.GetInt("TutorialShow") < convo.toturial && convo.convoDone)
         {
-            tutorial.tutorialPanel.SetActive(false);
+            tutorial.tutorialPanel.gameObject.SetActive(false);
         }
+
     }
     
 
@@ -70,10 +75,14 @@ public class SettingsMenu : MonoBehaviour
             }
         }
 
-        if (tutorial.tutorialAan)
+        
+        PlayerPrefs.SetInt("TutorialShow", 1);
+
+        if (PlayerPrefs.GetInt("TutorialShow") == convo.toturial && convo.convoDone)
         {
-            tutorial.tutorialPanel.SetActive(true);
+            tutorial.tutorialPanel.gameObject.SetActive(true);
         }
+
     }
 
     public void ResumeGame()
@@ -90,10 +99,14 @@ public class SettingsMenu : MonoBehaviour
             }
         }
 
-        if (tutorial.tutorialAan)
+       
+        PlayerPrefs.SetInt("TutorialShow", 1);
+
+        if(PlayerPrefs.GetInt("TutorialShow") == convo.toturial && convo.convoDone)
         {
-            tutorial.tutorialPanel.SetActive(true);
+            tutorial.tutorialPanel.gameObject.SetActive(true);
         }
+
 
     }
 
