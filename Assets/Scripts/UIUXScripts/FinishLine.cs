@@ -30,6 +30,7 @@ public class FinishLine : MonoBehaviour
         fietsJump.Play("WinAnimatie");
         crossedFinish = true;
         finishScherm.SetActive(true);
+        
 
         finnish = true;
     }
