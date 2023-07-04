@@ -107,6 +107,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Teleport"",
+                    ""type"": ""Button"",
+                    ""id"": ""f92c3e7c-69ef-45b7-80a9-29e29e8d2867"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -208,6 +217,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""SettingsOpen"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4775624a-5fd5-4bbe-8c0d-e7b512f47273"",
+                    ""path"": ""<Keyboard>/f2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Teleport"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -225,6 +245,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Default_SkipSplash = m_Default.FindAction("SkipSplash", throwIfNotFound: true);
         m_Default_NextConvo = m_Default.FindAction("NextConvo", throwIfNotFound: true);
         m_Default_SettingsOpen = m_Default.FindAction("SettingsOpen", throwIfNotFound: true);
+        m_Default_Teleport = m_Default.FindAction("Teleport", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -295,6 +316,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Default_SkipSplash;
     private readonly InputAction m_Default_NextConvo;
     private readonly InputAction m_Default_SettingsOpen;
+    private readonly InputAction m_Default_Teleport;
     public struct DefaultActions
     {
         private @PlayerInput m_Wrapper;
@@ -308,6 +330,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @SkipSplash => m_Wrapper.m_Default_SkipSplash;
         public InputAction @NextConvo => m_Wrapper.m_Default_NextConvo;
         public InputAction @SettingsOpen => m_Wrapper.m_Default_SettingsOpen;
+        public InputAction @Teleport => m_Wrapper.m_Default_Teleport;
         public InputActionMap Get() { return m_Wrapper.m_Default; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -344,6 +367,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SettingsOpen.started += instance.OnSettingsOpen;
             @SettingsOpen.performed += instance.OnSettingsOpen;
             @SettingsOpen.canceled += instance.OnSettingsOpen;
+            @Teleport.started += instance.OnTeleport;
+            @Teleport.performed += instance.OnTeleport;
+            @Teleport.canceled += instance.OnTeleport;
         }
 
         private void UnregisterCallbacks(IDefaultActions instance)
@@ -375,6 +401,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SettingsOpen.started -= instance.OnSettingsOpen;
             @SettingsOpen.performed -= instance.OnSettingsOpen;
             @SettingsOpen.canceled -= instance.OnSettingsOpen;
+            @Teleport.started -= instance.OnTeleport;
+            @Teleport.performed -= instance.OnTeleport;
+            @Teleport.canceled -= instance.OnTeleport;
         }
 
         public void RemoveCallbacks(IDefaultActions instance)
@@ -403,5 +432,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnSkipSplash(InputAction.CallbackContext context);
         void OnNextConvo(InputAction.CallbackContext context);
         void OnSettingsOpen(InputAction.CallbackContext context);
+        void OnTeleport(InputAction.CallbackContext context);
     }
 }
