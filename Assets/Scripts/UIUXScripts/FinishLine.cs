@@ -40,7 +40,8 @@ public class FinishLine : MonoBehaviour
     public void NaarSelectieScherm(string levelToLoad)
     {
         StartCoroutine(LoadLevelASync(levelToLoad));
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadScene("MainMenu");
+        
     }
 
     IEnumerator LoadLevelASync(string levelToLoad)
