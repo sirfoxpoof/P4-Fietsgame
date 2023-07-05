@@ -19,8 +19,15 @@ public class Wielen : MonoBehaviour
 
 
     {
+        if (wasd.specialControllerActive)
+        {
+            afstappen.SetFloat("Speed", wasd.specialControllerSpeed);
+        }
+        else
+        {
+            afstappen.SetFloat("Speed", wasd.speed);
+        }
 
-        afstappen.SetFloat("Speed", wasd.speed);
         float realWheelSpeed = wheelSpeed * Time.deltaTime;
         if (wasd.speed < -1)
         {
