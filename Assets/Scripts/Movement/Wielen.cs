@@ -27,5 +27,22 @@ public class Wielen : MonoBehaviour
             wiel1.transform.Rotate(realWheelSpeed, 0,0);
             wiel2.transform.Rotate(realWheelSpeed, 0,0);
         }
+
+        if (wasd.specialControllerActive)
+        {
+            
+            if (wasd.specialControllerSpeed < -1)
+            {
+                realWheelSpeed = -realWheelSpeed;
+            }
+
+            if (Mathf.Abs(wasd.specialControllerSpeed) > 1)
+            {
+                wiel1.transform.Rotate(realWheelSpeed, 0, 0);
+                wiel2.transform.Rotate(realWheelSpeed, 0, 0);
+            }
+
+        }
+
     }
 }
