@@ -7,6 +7,7 @@ public class Wielen : MonoBehaviour
     public GameObject wiel1, wiel2;
     public float wheelSpeed = 45;
     public Wasd wasd;
+    public Animator afstappen;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,12 @@ public class Wielen : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+
+
     {
+
+        afstappen.SetFloat("Speed", wasd.speed);
+        afstappen.SetFloat("Speed", wasd.specialControllerSpeed);
         float realWheelSpeed = wheelSpeed * Time.deltaTime;
         if (wasd.speed < -1)
         {
@@ -26,6 +32,7 @@ public class Wielen : MonoBehaviour
         {
             wiel1.transform.Rotate(realWheelSpeed, 0,0);
             wiel2.transform.Rotate(realWheelSpeed, 0,0);
+            //afstappen.Play("rig|Opstappen");
         }
 
         if (wasd.specialControllerActive)
@@ -44,5 +51,14 @@ public class Wielen : MonoBehaviour
 
         }
 
+        if (wasd.speed == 0) 
+        {
+            //afstappen.Play("rig|Afstappen 2?");
+        }
+        if(wasd.speed > 2)
+        {
+            //afstappen.Play("Fietsanimatie");
+        }
+        
     }
 }
