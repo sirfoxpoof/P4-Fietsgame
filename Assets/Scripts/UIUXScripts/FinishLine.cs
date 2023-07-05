@@ -13,8 +13,8 @@ public class FinishLine : MonoBehaviour
     public Slider loadprogressSlider;
     public float progressValue;
 
-    
 
+    public ConvoManager convo;
     public TutorialScript tuto;
 
     private void Start()
@@ -35,13 +35,23 @@ public class FinishLine : MonoBehaviour
         
         tuto.tutorialPanel.SetActive(false); 
         finnish = true;
+
+        PlayerPrefs.SetInt("TutorialShow", 0);
+
+        if (PlayerPrefs.GetInt("TutorialShow") == convo.toturial && convo.convoDone)
+        {
+            tuto.tutorialPanel.gameObject.SetActive(false);
+        }
+
+
     }
 
     public void NaarSelectieScherm(string levelToLoad)
     {
         StartCoroutine(LoadLevelASync(levelToLoad));
         SceneManager.LoadScene("MainMenu");
-        
+        PlayerPrefs.SetInt("dialougeKlaar", 0);
+
     }
 
     IEnumerator LoadLevelASync(string levelToLoad)
@@ -69,5 +79,6 @@ public class FinishLine : MonoBehaviour
     {
         SceneManager.LoadScene("TutorialLevelScene");
         Time.timeScale = 1;
+        PlayerPrefs.SetInt("dialougeKlaar", 0);
     }
 }
