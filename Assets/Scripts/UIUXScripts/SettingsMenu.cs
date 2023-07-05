@@ -8,6 +8,7 @@ public class SettingsMenu : MonoBehaviour
 {
     public GameObject settingsPanel, RUSure;
     public bool settingsAan = false;
+    public string sceneName;
 
     public ConvoManager convo;
     public TutorialScript tutorial;
@@ -123,7 +124,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void OpnieuwProberen()
     {
-        SceneManager.LoadScene("TutorialLevelScene");
+        SceneManager.LoadScene(sceneName);
         Time.timeScale = 1;
     }
 

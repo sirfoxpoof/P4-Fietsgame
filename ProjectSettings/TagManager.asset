@@ -11,6 +11,8 @@ TagManager:
   - FinishCube
   - NearDeath
   - WaterDood
+  - AndereKantOp
+  - Verdwaald
   layers:
   - Default
   - TransparentFX

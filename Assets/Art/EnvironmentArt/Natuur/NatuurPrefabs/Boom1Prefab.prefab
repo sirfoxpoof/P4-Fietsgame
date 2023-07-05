@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4908723718855667022}
   - component: {fileID: 4908723718855667023}
+  - component: {fileID: 5423783968936742833}
   m_Layer: 0
   m_Name: Boom1Prefab
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,6 +63,20 @@ LODGroup:
     renderers:
     - renderer: {fileID: 6043513591449550548}
   m_Enabled: 1
+--- !u!136 &5423783968936742833
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908723718855667020}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5722808
+  m_Height: 4.326843
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.22, z: 0}
 --- !u!1001 &4908723717686530048
 PrefabInstance:
   m_ObjectHideFlags: 0

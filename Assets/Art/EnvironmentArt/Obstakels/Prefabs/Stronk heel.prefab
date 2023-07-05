@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8862773362054546144}
   m_Layer: 0
   m_Name: Stronk heel
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

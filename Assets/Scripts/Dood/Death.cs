@@ -8,9 +8,9 @@ using System.IO.Ports;
 public class Death : MonoBehaviour
 {
     public Wasd wasd;
-    public GameObject deathScreen, fietssprite1, fietssprite2, waterDoodScreen;
+    public GameObject deathScreen, fietssprite1, fietssprite2, waterDoodScreen, andereKantScreen, verdwaaldScreen;
     public Transform respawn, player, cam;
-    public AudioSource nearDeathSound, realDeath, waterDood;
+    public AudioSource nearDeathSound, realDeath, waterDood, verdwaaldDeath;
 
     public bool dood, respawnn;
 
@@ -90,6 +90,31 @@ public class Death : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             waterDood.Play();
+
+            dood = true;
+
+        }
+
+        if (collisionInfo.collider.tag == "AndereKantOp")
+        {
+            wasd.serialPort.Close();
+            wasd.enabled = false;
+            andereKantScreen.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            
+            dood = true;
+
+        }
+
+        if (collisionInfo.collider.tag == "Verdwaald")
+        {
+            wasd.serialPort.Close();
+            wasd.enabled = false;
+            verdwaaldScreen.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            verdwaaldDeath.Play();
 
             dood = true;
 
