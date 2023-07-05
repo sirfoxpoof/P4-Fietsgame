@@ -31235,7 +31235,8 @@ MonoBehaviour:
   wiel1: {fileID: 1478914279}
   wiel2: {fileID: 1983424241}
   wheelSpeed: 45
-  wasd: {fileID: 0}
+  wasd: {fileID: 1929726847}
+  afstappen: {fileID: 873630318}
 --- !u!95 &873630318
 Animator:
   serializedVersion: 5
