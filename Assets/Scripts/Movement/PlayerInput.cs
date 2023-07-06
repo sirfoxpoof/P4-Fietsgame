@@ -116,6 +116,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SkipTimer"",
+                    ""type"": ""Button"",
+                    ""id"": ""4bae8eac-3c75-4a3f-a557-4c97b6b895e6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -228,6 +237,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Teleport"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9c3be1c2-8206-46fe-b559-aea29d1d1c94"",
+                    ""path"": ""<Keyboard>/f3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SkipTimer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -246,6 +266,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Default_NextConvo = m_Default.FindAction("NextConvo", throwIfNotFound: true);
         m_Default_SettingsOpen = m_Default.FindAction("SettingsOpen", throwIfNotFound: true);
         m_Default_Teleport = m_Default.FindAction("Teleport", throwIfNotFound: true);
+        m_Default_SkipTimer = m_Default.FindAction("SkipTimer", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -317,6 +338,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Default_NextConvo;
     private readonly InputAction m_Default_SettingsOpen;
     private readonly InputAction m_Default_Teleport;
+    private readonly InputAction m_Default_SkipTimer;
     public struct DefaultActions
     {
         private @PlayerInput m_Wrapper;
@@ -331,6 +353,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @NextConvo => m_Wrapper.m_Default_NextConvo;
         public InputAction @SettingsOpen => m_Wrapper.m_Default_SettingsOpen;
         public InputAction @Teleport => m_Wrapper.m_Default_Teleport;
+        public InputAction @SkipTimer => m_Wrapper.m_Default_SkipTimer;
         public InputActionMap Get() { return m_Wrapper.m_Default; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -370,6 +393,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Teleport.started += instance.OnTeleport;
             @Teleport.performed += instance.OnTeleport;
             @Teleport.canceled += instance.OnTeleport;
+            @SkipTimer.started += instance.OnSkipTimer;
+            @SkipTimer.performed += instance.OnSkipTimer;
+            @SkipTimer.canceled += instance.OnSkipTimer;
         }
 
         private void UnregisterCallbacks(IDefaultActions instance)
@@ -404,6 +430,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Teleport.started -= instance.OnTeleport;
             @Teleport.performed -= instance.OnTeleport;
             @Teleport.canceled -= instance.OnTeleport;
+            @SkipTimer.started -= instance.OnSkipTimer;
+            @SkipTimer.performed -= instance.OnSkipTimer;
+            @SkipTimer.canceled -= instance.OnSkipTimer;
         }
 
         public void RemoveCallbacks(IDefaultActions instance)
@@ -433,5 +462,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnNextConvo(InputAction.CallbackContext context);
         void OnSettingsOpen(InputAction.CallbackContext context);
         void OnTeleport(InputAction.CallbackContext context);
+        void OnSkipTimer(InputAction.CallbackContext context);
     }
 }
