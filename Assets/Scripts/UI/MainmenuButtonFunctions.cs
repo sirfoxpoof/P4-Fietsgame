@@ -13,6 +13,8 @@ public class MainmenuButtonFunctions : MonoBehaviour
     public void Start()
     {
         Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void QuitGame()
