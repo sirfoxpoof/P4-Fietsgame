@@ -49,7 +49,10 @@ public class TimerEindLevel : MonoBehaviour
 
     public void TimerSkip(InputAction.CallbackContext context)
     {
-        minutes = "2";
+        if (context.performed)
+        {
+            minutes = "2";
+        }
 
     }
 

@@ -31,7 +31,7 @@ public class Wasd : MonoBehaviour
     public float specialControllerSensitivity = 1;
     public bool specialControllerActive = false;
 
-    // change your serial port
+    // verander port voor arduino input.
     public SerialPort serialPort = new SerialPort("COM5", 9600);
 
 
@@ -75,7 +75,12 @@ public class Wasd : MonoBehaviour
                     // Speed
                     specialControllerValue = wheelValue * wheelFactor;
 
-                    
+                    // Ring
+                    int ring = ringValue;
+                    if (ring == 1)
+                    {
+                        Debug.Log("Ring Ring!");
+                    }
                 } 
                 else
                 {
