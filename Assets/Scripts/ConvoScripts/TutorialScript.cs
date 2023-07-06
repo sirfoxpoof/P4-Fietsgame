@@ -16,15 +16,15 @@ public class TutorialScript : MonoBehaviour
     public Wasd wasd;
     public ConvoManager convoManager;
 
-    private void Awake()
+    private void Start()
     {
-       
         if (wasd.specialControllerActive && convoManager.convoDone)
         {
-            w.gameObject.SetActive(false);
-            s.gameObject.SetActive(false);
             tutorialPanel.SetActive(true);
             fiets.gameObject.SetActive(true);
+            w.gameObject.SetActive(false);
+            s.gameObject.SetActive(false);
+            
         }
         else
         {
