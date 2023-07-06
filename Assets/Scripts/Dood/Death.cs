@@ -48,9 +48,9 @@ public class Death : MonoBehaviour
 
         if (dood)
         {
-            PlayerPrefs.SetInt("TutorialShow", 1);
+            PlayerPrefs.SetInt("TutorialShow", 0);
 
-            if (PlayerPrefs.GetInt("TutorialShow") == convo.toturial && convo.convoDone)
+            if (PlayerPrefs.GetInt("TutorialShow") < convo.toturial && convo.convoDone)
             {
                 tuut.tutorialPanel.gameObject.SetActive(false);
             }

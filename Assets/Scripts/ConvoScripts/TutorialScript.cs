@@ -8,7 +8,7 @@ public class TutorialScript : MonoBehaviour
 {
     public TMP_Text w, s, fiets, muis, ontwijk;
     public GameObject tutorialPanel;
-    private bool wKlaar, sKlaar, muisKlaar;
+    private bool wKlaar, sKlaar, muisKlaar, fietsklaar;
     public bool tutorialAan;
 
     public int tutoBezig;
@@ -16,25 +16,19 @@ public class TutorialScript : MonoBehaviour
     public Wasd wasd;
     public ConvoManager convoManager;
 
-    private void Start()
+
+    private void Awake()
     {
-        if (wasd.specialControllerActive && convoManager.convoDone)
+        if (wasd.specialControllerActive)
         {
-            tutorialPanel.SetActive(true);
-            fiets.gameObject.SetActive(true);
             w.gameObject.SetActive(false);
             s.gameObject.SetActive(false);
-
-            wKlaar = false;
-            sKlaar = false;
-            muisKlaar = false;
-            tutorialAan = false;
+            tutorialPanel.SetActive(false);
         }
-        else
+        else if(!wasd.specialControllerActive && convoManager.convoDone) 
         {
             w.gameObject.SetActive(true);
             s.gameObject.SetActive(true);
-            ontwijk.gameObject.SetActive(false);
             tutorialPanel.SetActive(false);
 
             wKlaar = false;
@@ -43,10 +37,25 @@ public class TutorialScript : MonoBehaviour
             tutorialAan = false;
         }
     }
-
     private void Update()
     {
-       
+        if (PlayerPrefs.GetInt("TutorialShow") == convoManager.toturial && convoManager.convoDone)
+        {
+            if (wasd.specialControllerActive && convoManager.convoDone)
+            {
+                tutorialPanel.SetActive(true);
+                fiets.gameObject.SetActive(true);
+                w.gameObject.SetActive(false);
+                s.gameObject.SetActive(false);
+
+                if (fietsklaar)
+                {
+                    fiets.gameObject.SetActive(false);
+                }
+            }
+        }
+        
+        
         if (wKlaar && sKlaar)
         {
             muis.gameObject.SetActive(true);
@@ -63,8 +72,7 @@ public class TutorialScript : MonoBehaviour
 
         if (wasd.specialControllerSpeed > 1)
         {
-            wKlaar = true;
-            sKlaar = true;
+            StartCoroutine(Fietssss());
         }
 
     }
@@ -121,5 +129,14 @@ public class TutorialScript : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         muisKlaar = true;
+    }
+
+    private IEnumerator Fietssss()
+    {
+        yield return new WaitForSeconds(3f);
+        fiets.gameObject.SetActive(false);
+        sKlaar= true;
+        wKlaar= true;
+        fietsklaar = true;  
     }
 }

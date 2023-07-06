@@ -75,12 +75,7 @@ public class Wasd : MonoBehaviour
                     // Speed
                     specialControllerValue = wheelValue * wheelFactor;
 
-                    // Ring
-                    int ring = ringValue;
-                    if (ring == 1)
-                    {
-                        Debug.Log("Ring Ring!");
-                    }
+                    
                 } 
                 else
                 {
