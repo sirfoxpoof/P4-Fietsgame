@@ -18,16 +18,7 @@ public class TutorialScript : MonoBehaviour
 
     private void Awake()
     {
-        w.gameObject.SetActive(true);
-        s.gameObject.SetActive(true);
-        ontwijk.gameObject.SetActive(false);
-        tutorialPanel.SetActive(false);
-
-        wKlaar = false;
-        sKlaar = false;
-        muisKlaar = false;
-        tutorialAan = false;
-
+       
         if (wasd.specialControllerActive && convoManager.convoDone)
         {
             w.gameObject.SetActive(false);
@@ -35,12 +26,23 @@ public class TutorialScript : MonoBehaviour
             tutorialPanel.SetActive(true);
             fiets.gameObject.SetActive(true);
         }
+        else
+        {
+            w.gameObject.SetActive(true);
+            s.gameObject.SetActive(true);
+            ontwijk.gameObject.SetActive(false);
+            tutorialPanel.SetActive(false);
+
+            wKlaar = false;
+            sKlaar = false;
+            muisKlaar = false;
+            tutorialAan = false;
+        }
     }
 
     private void Update()
     {
        
-
         if (wKlaar && sKlaar)
         {
             muis.gameObject.SetActive(true);

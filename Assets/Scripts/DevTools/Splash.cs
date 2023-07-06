@@ -10,6 +10,7 @@ public class Splash : MonoBehaviour
     
     private void Start()
     {
+        
         StartCoroutine(SplashScreen());
         
     }
