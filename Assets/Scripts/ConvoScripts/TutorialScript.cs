@@ -8,14 +8,14 @@ public class TutorialScript : MonoBehaviour
 {
     public TMP_Text w, s, fiets, muis, ontwijk;
     public GameObject tutorialPanel;
-    private bool wKlaar, sKlaar, muisKlaar, fietsklaar;
-    public bool tutorialAan;
+    private bool muisKlaar, fietsklaar;
+    public bool tutorialAan, wKlaar, sKlaar;
 
     public int tutoBezig;
 
     public Wasd wasd;
     public ConvoManager convoManager;
-
+   
 
     private void Awake()
     {
@@ -54,8 +54,9 @@ public class TutorialScript : MonoBehaviour
                 }
             }
         }
-        
-        
+       
+
+
         if (wKlaar && sKlaar)
         {
             muis.gameObject.SetActive(true);

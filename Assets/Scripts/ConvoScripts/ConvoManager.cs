@@ -51,6 +51,13 @@ public class ConvoManager : MonoBehaviour
             timer.enabled = true;
             tutorialScript.enabled = true;
             tutorialScript.tutorialAan = true;
+
+            if(!tutorialScript.wKlaar && !tutorialScript.sKlaar)
+            {
+                tutorialScript.w.gameObject.SetActive(true);
+                tutorialScript.s.gameObject.SetActive(true);
+            }
+            
         }
 
         if (!convoDone)
