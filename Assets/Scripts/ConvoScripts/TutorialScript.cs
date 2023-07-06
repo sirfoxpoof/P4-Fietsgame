@@ -24,7 +24,11 @@ public class TutorialScript : MonoBehaviour
             fiets.gameObject.SetActive(true);
             w.gameObject.SetActive(false);
             s.gameObject.SetActive(false);
-            
+
+            wKlaar = false;
+            sKlaar = false;
+            muisKlaar = false;
+            tutorialAan = false;
         }
         else
         {
