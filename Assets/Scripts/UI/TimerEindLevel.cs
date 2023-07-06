@@ -47,6 +47,21 @@ public class TimerEindLevel : MonoBehaviour
 
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("TeletubbieFinish"))
+        {
+            if (teletubbieSpriteLevend == true )
+            {
+
+            }
+            else if(teletubbieSpriteDood == true)
+            {
+
+            }
+        }
+    }
+
     public void TimerSkip(InputAction.CallbackContext context)
     {
         if (context.performed)

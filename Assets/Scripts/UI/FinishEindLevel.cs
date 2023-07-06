@@ -46,13 +46,10 @@ public class FinishEindLevel : MonoBehaviour
 
     }
 
-    /*public void NaarSelectieScherm(string levelToLoad)
+    public void NaarSelectieScherm(string levelToLoad)
     {
-        StartCoroutine(LoadLevelASync(levelToLoad));
         SceneManager.LoadScene("MainMenu");
-        PlayerPrefs.SetInt("dialougeKlaar", 0);
-
-    }*/
+    }
 
     /*IEnumerator LoadLevelASync(string levelToLoad)
     {

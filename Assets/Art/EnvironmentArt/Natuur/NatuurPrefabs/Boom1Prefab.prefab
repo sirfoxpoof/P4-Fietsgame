@@ -10,13 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4908723718855667022}
   - component: {fileID: 4908723718855667023}
-  - component: {fileID: 5423783968936742833}
   m_Layer: 0
   m_Name: Boom1Prefab
-  m_TagString: Obstacle
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4908723718855667022
 Transform:
@@ -63,20 +62,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 6043513591449550548}
   m_Enabled: 1
---- !u!136 &5423783968936742833
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4908723718855667020}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5722808
-  m_Height: 4.326843
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.22, z: 0}
 --- !u!1001 &4908723717686530048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,6 +121,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P4BomenHigh
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2406b5ca8968d7749b4571c3db819b47, type: 3}
+      propertyPath: m_TagString
+      value: NearDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2406b5ca8968d7749b4571c3db819b47, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2406b5ca8968d7749b4571c3db819b47, type: 3}
 --- !u!4 &4870066078933383147 stripped
@@ -143,6 +136,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2406b5ca8968d7749b4571c3db819b47, type: 3}
   m_PrefabInstance: {fileID: 4908723717686530048}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5250673691967139153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2406b5ca8968d7749b4571c3db819b47, type: 3}
+  m_PrefabInstance: {fileID: 4908723717686530048}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6039627494893502926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250673691967139153}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 2, z: 0.8}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!23 &6043513591349316740 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 2406b5ca8968d7749b4571c3db819b47, type: 3}
@@ -206,6 +217,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 98c3e8f6ef7be314aafddc88fa8ed1bf, type: 3}
       propertyPath: m_Name
       value: P4BomenPlanes
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98c3e8f6ef7be314aafddc88fa8ed1bf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98c3e8f6ef7be314aafddc88fa8ed1bf, type: 3}
@@ -277,6 +292,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6e97045def7238b4db791f2cf60b21a5, type: 3}
       propertyPath: m_Name
       value: P4BomenLow
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6e97045def7238b4db791f2cf60b21a5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e97045def7238b4db791f2cf60b21a5, type: 3}

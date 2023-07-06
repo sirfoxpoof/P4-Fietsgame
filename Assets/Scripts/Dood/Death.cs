@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using System.IO.Ports;
-
+using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
@@ -16,6 +16,9 @@ public class Death : MonoBehaviour
 
     private int lives = 1;
 
+    public string sceneName;
+
+
     public TutorialScript tuut;
     public ConvoManager convo;
     private void Start()
@@ -24,7 +27,10 @@ public class Death : MonoBehaviour
         fietssprite1.SetActive(true);
         fietssprite2.SetActive(true);
 
-        dood = false;  
+        dood = false;
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
 
     }//canvas staat standaard uit
 
@@ -46,15 +52,19 @@ public class Death : MonoBehaviour
             }
         }
 
-        if (dood)
+        if(sceneName == "TutorialLevelScene")
         {
-            PlayerPrefs.SetInt("TutorialShow", 0);
-
-            if (PlayerPrefs.GetInt("TutorialShow") < convo.toturial && convo.convoDone)
+            if (dood)
             {
-                tuut.tutorialPanel.gameObject.SetActive(false);
+                PlayerPrefs.SetInt("TutorialShow", 0);
+
+                if (PlayerPrefs.GetInt("TutorialShow") < convo.toturial && convo.convoDone)
+                {
+                    tuut.tutorialPanel.gameObject.SetActive(false);
+                }
             }
         }
+           
        
     }
 
@@ -72,9 +82,9 @@ public class Death : MonoBehaviour
     {
         if (collisionInfo.collider.tag == "Obstacle")
         {
+            deathScreen.SetActive(true);
             wasd.serialPort.Close();
             wasd.enabled = false;
-            deathScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             realDeath.Play();
