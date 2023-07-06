@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3562335494533419584}
   - component: {fileID: 486440262258728421}
   - component: {fileID: 2388272978102184239}
+  - component: {fileID: 7887979730039826216}
   m_Layer: 0
   m_Name: Stronk
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7887979730039826216
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4189515259655899386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.9143355, z: 1}
+  m_Center: {x: 0.10441932, y: 0.43765318, z: 0.16135682}
