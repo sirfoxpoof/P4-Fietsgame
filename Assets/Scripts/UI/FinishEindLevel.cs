@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class FinishEindLevel : MonoBehaviour
 {
     public bool crossedFinish, finnish;
-    public GameObject finishScherm;
-    public Animator fietsJump;
+    //public GameObject finishScherm;
+    //public Animator fietsJump;
 
-    public Slider loadprogressSlider;
-    public float progressValue;
+   // public Slider loadprogressSlider;
+    //public float progressValue;
 
 
     public ConvoManager convo;
@@ -20,7 +20,7 @@ public class FinishEindLevel : MonoBehaviour
     private void Start()
     {
         crossedFinish = false;
-        finishScherm.SetActive(false);
+        //finishScherm.SetActive(false);
 
         finnish = false;
     }
@@ -29,9 +29,9 @@ public class FinishEindLevel : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        fietsJump.Play("WinAnimatie");
+        //fietsJump.Play("WinAnimatie");
         crossedFinish = true;
-        finishScherm.SetActive(true);
+        //finishScherm.SetActive(true);
 
         tuto.tutorialPanel.SetActive(false);
         finnish = true;
@@ -46,15 +46,15 @@ public class FinishEindLevel : MonoBehaviour
 
     }
 
-    public void NaarSelectieScherm(string levelToLoad)
+    /*public void NaarSelectieScherm(string levelToLoad)
     {
         StartCoroutine(LoadLevelASync(levelToLoad));
         SceneManager.LoadScene("MainMenu");
         PlayerPrefs.SetInt("dialougeKlaar", 0);
 
-    }
+    }*/
 
-    IEnumerator LoadLevelASync(string levelToLoad)
+    /*IEnumerator LoadLevelASync(string levelToLoad)
     {
         AsyncOperation loadOperation = SceneManager.LoadSceneAsync(levelToLoad);
 
@@ -73,7 +73,7 @@ public class FinishEindLevel : MonoBehaviour
 
 
         }
-    }
+    }*/
 
     public void LevelOpnieuwSpelen()
     {
