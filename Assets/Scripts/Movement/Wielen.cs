@@ -8,6 +8,7 @@ public class Wielen : MonoBehaviour
     public float wheelSpeed = 45;
     public Wasd wasd;
     public Animator afstappen;
+    public AudioSource fietsGeluidjes;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,7 @@ public class Wielen : MonoBehaviour
         {
             wiel1.transform.Rotate(realWheelSpeed, 0,0);
             wiel2.transform.Rotate(realWheelSpeed, 0,0);
+            fietsGeluidjes.Play();
             //afstappen.Play("rig|Opstappen");
         }
 
@@ -53,6 +55,7 @@ public class Wielen : MonoBehaviour
             {
                 wiel1.transform.Rotate(realWheelSpeed, 0, 0);
                 wiel2.transform.Rotate(realWheelSpeed, 0, 0);
+                fietsGeluidjes.Play();
             }
 
         }

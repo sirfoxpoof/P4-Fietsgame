@@ -3794,7 +3794,7 @@ GameObject:
   - component: {fileID: 99529877}
   m_Layer: 0
   m_Name: Terrain_(0.00, 0.00, 800.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4826,7 +4826,7 @@ GameObject:
   - component: {fileID: 126724386}
   m_Layer: 0
   m_Name: Terrain_(200.00, 0.00, 800.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4904,7 +4904,7 @@ GameObject:
   - component: {fileID: 126814288}
   m_Layer: 0
   m_Name: Terrain_(600.00, 0.00, 800.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5071,7 +5071,7 @@ GameObject:
   - component: {fileID: 131902831}
   m_Layer: 0
   m_Name: Terrain_(400.00, 0.00, 400.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5446,7 +5446,7 @@ GameObject:
   - component: {fileID: 141458710}
   m_Layer: 0
   m_Name: Terrain_(800.00, 0.00, 200.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -7737,7 +7737,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: d397561e97a30dd4da27909656d8861b, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0e97197256be19744ba55f039d03acb2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -11192,7 +11192,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: d397561e97a30dd4da27909656d8861b, type: 2}
   m_audioClip: {fileID: 8300000, guid: 5fd155d1b05062d43a7cf9253ad86e56, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.652
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -13630,7 +13630,7 @@ GameObject:
   - component: {fileID: 383997395}
   m_Layer: 0
   m_Name: Terrain_(0.00, 0.00, 200.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -14105,7 +14105,7 @@ GameObject:
   - component: {fileID: 390869228}
   m_Layer: 0
   m_Name: Terrain_(200.00, 0.00, 0.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -16503,7 +16503,7 @@ GameObject:
   - component: {fileID: 475394491}
   m_Layer: 0
   m_Name: Terrain_(800.00, 0.00, 600.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -18863,7 +18863,7 @@ GameObject:
   - component: {fileID: 549668122}
   m_Layer: 0
   m_Name: Terrain_(200.00, 0.00, 600.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -21678,7 +21678,7 @@ GameObject:
   - component: {fileID: 637836464}
   m_Layer: 0
   m_Name: Terrain_(800.00, 0.00, 800.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -26357,7 +26357,7 @@ GameObject:
   - component: {fileID: 784046464}
   m_Layer: 0
   m_Name: Terrain_(400.00, 0.00, 0.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -26858,7 +26858,7 @@ GameObject:
   - component: {fileID: 806497939}
   m_Layer: 0
   m_Name: Terrain_(800.00, 0.00, 400.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -27889,7 +27889,7 @@ GameObject:
   - component: {fileID: 824469198}
   m_Layer: 0
   m_Name: Terrain_(200.00, 0.00, 200.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -29674,6 +29674,7 @@ MonoBehaviour:
   wheelSpeed: 45
   wasd: {fileID: 1929726847}
   afstappen: {fileID: 873630318}
+  fietsGeluidjes: {fileID: 0}
 --- !u!95 &873630318
 Animator:
   serializedVersion: 5
@@ -30292,7 +30293,7 @@ GameObject:
   - component: {fileID: 887508542}
   m_Layer: 0
   m_Name: Terrain_(400.00, 0.00, 800.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -38001,7 +38002,7 @@ GameObject:
   - component: {fileID: 1149166753}
   m_Layer: 0
   m_Name: Terrain_(600.00, 0.00, 600.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -38787,7 +38788,7 @@ GameObject:
   - component: {fileID: 1176500787}
   m_Layer: 0
   m_Name: Terrain_(600.00, 0.00, 200.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -44726,7 +44727,7 @@ GameObject:
   - component: {fileID: 1388398169}
   m_Layer: 0
   m_Name: Terrain_(200.00, 0.00, 400.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -44846,7 +44847,7 @@ GameObject:
   - component: {fileID: 1395892611}
   m_Layer: 0
   m_Name: Terrain_(600.00, 0.00, 400.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -46408,7 +46409,7 @@ GameObject:
   - component: {fileID: 1439090705}
   m_Layer: 0
   m_Name: Terrain_(400.00, 0.00, 200.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -47198,7 +47199,7 @@ GameObject:
   - component: {fileID: 1459550860}
   m_Layer: 0
   m_Name: Terrain_(400.00, 0.00, 600.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -51730,7 +51731,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: d397561e97a30dd4da27909656d8861b, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c1273cd72c9d0674f8d1abe107c7cbfe, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -55926,11 +55927,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: d397561e97a30dd4da27909656d8861b, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 710cbbd0246abf24dad8b6d89b462a57, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -57088,7 +57089,7 @@ GameObject:
   - component: {fileID: 1725505972}
   m_Layer: 0
   m_Name: Terrain (1)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -57690,7 +57691,7 @@ GameObject:
   - component: {fileID: 1733829319}
   m_Layer: 0
   m_Name: Terrain_(600.00, 0.00, 0.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -58996,7 +58997,7 @@ GameObject:
   - component: {fileID: 1782252285}
   m_Layer: 0
   m_Name: Terrain_(800.00, 0.00, 0.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -63125,8 +63126,8 @@ GameObject:
   - component: {fileID: 1929726847}
   - component: {fileID: 1929726845}
   - component: {fileID: 1929726844}
-  - component: {fileID: 1929726853}
   - component: {fileID: 1929726854}
+  - component: {fileID: 1929726853}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -63273,7 +63274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929726841}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -57.12, y: 1.19, z: 348.44}
+  m_LocalPosition: {x: -56.49, y: 1.19, z: 345.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -63308,7 +63309,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1941ee0150d2b458bfaf003f1c61f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeHitCheckDistance: 0.5
+  treeHitCheckDistance: 1.3
+  timeBetweenHits: 2
+  canGetHit: 1
 --- !u!1 &1930974126
 GameObject:
   m_ObjectHideFlags: 0
@@ -67352,7 +67355,7 @@ GameObject:
   - component: {fileID: 2052849946}
   m_Layer: 0
   m_Name: Terrain_(0.00, 0.00, 600.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -68980,7 +68983,7 @@ GameObject:
   - component: {fileID: 2093823939}
   m_Layer: 0
   m_Name: Terrain_(0.00, 0.00, 400.00)
-  m_TagString: Untagged
+  m_TagString: NearDeath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
