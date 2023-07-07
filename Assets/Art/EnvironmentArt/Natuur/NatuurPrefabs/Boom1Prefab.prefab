@@ -156,19 +156,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2406b5ca8968d7749b4571c3db819b47, type: 3}
   m_PrefabInstance: {fileID: 4908723717686530048}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &6039627494893502926
-BoxCollider:
+--- !u!136 &4775264335253340785
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5250673691967139153}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8, y: 2, z: 0.8}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.31586745
+  m_Height: 3.4961681
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.94, z: 0}
 --- !u!23 &6043513591349316740 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 2406b5ca8968d7749b4571c3db819b47, type: 3}
@@ -234,6 +235,10 @@ PrefabInstance:
       value: P4BomenPlanes
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 98c3e8f6ef7be314aafddc88fa8ed1bf, type: 3}
+      propertyPath: m_TagString
+      value: NearDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98c3e8f6ef7be314aafddc88fa8ed1bf, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -244,6 +249,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 98c3e8f6ef7be314aafddc88fa8ed1bf, type: 3}
   m_PrefabInstance: {fileID: 4908723717854126672}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5250673692135382785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 98c3e8f6ef7be314aafddc88fa8ed1bf, type: 3}
+  m_PrefabInstance: {fileID: 4908723717854126672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &2124170372963247712
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250673692135382785}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.31586745
+  m_Height: 3.4961681
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.94, z: 0}
 --- !u!23 &6043513591449550548 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 98c3e8f6ef7be314aafddc88fa8ed1bf, type: 3}
@@ -309,6 +333,10 @@ PrefabInstance:
       value: P4BomenLow
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6e97045def7238b4db791f2cf60b21a5, type: 3}
+      propertyPath: m_TagString
+      value: NearDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6e97045def7238b4db791f2cf60b21a5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -319,6 +347,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6e97045def7238b4db791f2cf60b21a5, type: 3}
   m_PrefabInstance: {fileID: 4908723718589301977}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5250673690856782216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e97045def7238b4db791f2cf60b21a5, type: 3}
+  m_PrefabInstance: {fileID: 4908723718589301977}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &5967313010912501927
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250673690856782216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.31586745
+  m_Height: 3.4961681
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.94, z: 0}
 --- !u!23 &6043513590578567261 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 6e97045def7238b4db791f2cf60b21a5, type: 3}

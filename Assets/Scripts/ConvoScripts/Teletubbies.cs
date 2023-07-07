@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Teletubbies : MonoBehaviour
 {
-    public GameObject teletubbie1, teletubbie2, tubbieBox, finishScherm;
+    public GameObject teletubbie1, teletubbie2, tubbieBox, finishScherm, finishSchermDood;
     private int conversationPlus;
 
     public TMP_Text text;
@@ -87,7 +87,9 @@ public class Teletubbies : MonoBehaviour
                         conversationPlus = 0;
 
                         tubbieBox.SetActive(false);
-                        finishScherm.SetActive(true);
+                        finishSchermDood.SetActive(true);
+                        Cursor.lockState = CursorLockMode.None;
+                        Cursor.visible = true;
 
                     }
                 }

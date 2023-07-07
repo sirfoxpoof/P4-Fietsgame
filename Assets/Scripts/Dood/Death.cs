@@ -78,6 +78,13 @@ public class Death : MonoBehaviour
 
         }
     }
+
+    public void HitATreeDirtyFix()
+    {
+        lives -= 1;
+        fietssprite2.SetActive(false);
+        nearDeathSound.Play();
+    }
     private void OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.collider.tag == "Obstacle")
@@ -92,7 +99,7 @@ public class Death : MonoBehaviour
             dood = true;
         }
 
-        if (collisionInfo.collider.tag == "WaterDood")
+        else if (collisionInfo.collider.tag == "WaterDood")
         {
             wasd.serialPort.Close();
             wasd.enabled = false;
@@ -105,7 +112,7 @@ public class Death : MonoBehaviour
 
         }
 
-        if (collisionInfo.collider.tag == "AndereKantOp")
+        else if (collisionInfo.collider.tag == "AndereKantOp")
         {
             wasd.serialPort.Close();
             wasd.enabled = false;
@@ -117,7 +124,7 @@ public class Death : MonoBehaviour
 
         }
 
-        if (collisionInfo.collider.tag == "Verdwaald")
+        else  if (collisionInfo.collider.tag == "Verdwaald")
         {
             wasd.serialPort.Close();
             wasd.enabled = false;
