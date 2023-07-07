@@ -10,6 +10,8 @@ public class SettingsMenu : MonoBehaviour
     public bool settingsAan = false;
     public string sceneName;
 
+   
+    
     public ConvoManager convo;
     public TutorialScript tutorial;
 
@@ -17,6 +19,9 @@ public class SettingsMenu : MonoBehaviour
     {
         settingsPanel.gameObject.SetActive(false);
         RUSure.SetActive(false);
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
     }
 
   
@@ -45,7 +50,11 @@ public class SettingsMenu : MonoBehaviour
         settingsPanel.gameObject.SetActive(true);
         Time.timeScale = 0;
 
-        settingsAan = true;
+        if (sceneName == "EindLevelScene")
+        {
+            settingsAan = true;
+        }
+
         if (!convo.convoDone)
         {
             convo.dialougebalk.SetActive(false);
@@ -70,7 +79,10 @@ public class SettingsMenu : MonoBehaviour
         Time.timeScale = 1;
         settingsPanel.gameObject.SetActive(false);
 
-        settingsAan = false;
+        if (sceneName == "EindLevelScene")
+        {
+            settingsAan = false;
+        }
 
         if (PlayerPrefs.GetInt("dialougeKlaar") < convo.byeDialouge)
         {
@@ -95,7 +107,11 @@ public class SettingsMenu : MonoBehaviour
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         settingsPanel.gameObject.SetActive(false);
-        settingsAan = false;
+
+        if (sceneName == "EindLevelScene")
+        {
+            settingsAan = false;
+        }
 
         if (PlayerPrefs.GetInt("dialougeKlaar") < convo.byeDialouge)
         {
