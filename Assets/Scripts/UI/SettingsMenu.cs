@@ -24,19 +24,17 @@ public class SettingsMenu : MonoBehaviour
     {
         if (context.performed)
         {
+            
             if (!settingsAan)
             {
                 SettingsMenuOn();
             }
-            
             else
             {
                 SettingsMenuOff();
-                
+               
             }
             settingsAan = !settingsAan;
-            
-
         }
     }
 
@@ -47,6 +45,7 @@ public class SettingsMenu : MonoBehaviour
         settingsPanel.gameObject.SetActive(true);
         Time.timeScale = 0;
 
+        settingsAan = true;
         if (!convo.convoDone)
         {
             convo.dialougebalk.SetActive(false);
@@ -70,7 +69,8 @@ public class SettingsMenu : MonoBehaviour
         Cursor.visible = false;
         Time.timeScale = 1;
         settingsPanel.gameObject.SetActive(false);
-        
+
+        settingsAan = false;
 
         if (PlayerPrefs.GetInt("dialougeKlaar") < convo.byeDialouge)
         {
@@ -95,6 +95,7 @@ public class SettingsMenu : MonoBehaviour
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         settingsPanel.gameObject.SetActive(false);
+        settingsAan = false;
 
         if (PlayerPrefs.GetInt("dialougeKlaar") < convo.byeDialouge)
         {
