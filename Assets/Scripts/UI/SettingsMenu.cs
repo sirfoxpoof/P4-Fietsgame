@@ -32,8 +32,11 @@ public class SettingsMenu : MonoBehaviour
             else
             {
                 SettingsMenuOff();
+                
             }
             settingsAan = !settingsAan;
+            
+
         }
     }
 
@@ -67,6 +70,7 @@ public class SettingsMenu : MonoBehaviour
         Cursor.visible = false;
         Time.timeScale = 1;
         settingsPanel.gameObject.SetActive(false);
+        
 
         if (PlayerPrefs.GetInt("dialougeKlaar") < convo.byeDialouge)
         {

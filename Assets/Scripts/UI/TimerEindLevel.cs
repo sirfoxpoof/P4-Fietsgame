@@ -13,6 +13,7 @@ public class TimerEindLevel : MonoBehaviour
     public GameObject teletubbieSpriteDood, teletubbieSpriteLevend;
 
 
+
     void Start()
     {
         startTime = Time.time;
@@ -23,6 +24,7 @@ public class TimerEindLevel : MonoBehaviour
 
     public void Update()
     {
+        
         if (finishScript.crossedFinish == true)
         {
             return;
@@ -67,6 +69,9 @@ public class TimerEindLevel : MonoBehaviour
         if (context.performed)
         {
             minutes = "2";
+            
+
+            
         }
 
     }
