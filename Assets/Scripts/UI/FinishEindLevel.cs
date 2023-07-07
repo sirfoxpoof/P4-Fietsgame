@@ -55,7 +55,7 @@ public class FinishEindLevel : MonoBehaviour
 
     public void LevelOpnieuwSpelen()
     {
-        SceneManager.LoadScene("TutorialLevelScene");
+        SceneManager.LoadScene("EindLevelScene");
         Time.timeScale = 1;
         PlayerPrefs.SetInt("dialougeKlaar", 0);
     }
