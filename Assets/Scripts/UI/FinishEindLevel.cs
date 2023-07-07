@@ -51,26 +51,7 @@ public class FinishEindLevel : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    /*IEnumerator LoadLevelASync(string levelToLoad)
-    {
-        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(levelToLoad);
-
-        loadOperation.allowSceneActivation = false;
-        yield return new WaitForSeconds(2f);
-        loadOperation.allowSceneActivation = true;
-
-
-        while (!loadOperation.isDone)
-        {
-
-            progressValue = Mathf.Clamp01(loadOperation.progress / 0.9f);
-            loadprogressSlider.value = progressValue;
-            Debug.Log(progressValue);
-            yield return new WaitForSeconds(3f);
-
-
-        }
-    }*/
+   
 
     public void LevelOpnieuwSpelen()
     {
