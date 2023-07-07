@@ -15,7 +15,7 @@ public class TutorialScript : MonoBehaviour
 
     public Wasd wasd;
     public ConvoManager convoManager;
-   
+    public SettingsMenu settingsMenu;
 
     private void Awake()
     {
@@ -54,8 +54,14 @@ public class TutorialScript : MonoBehaviour
                 }
             }
         }
-       
 
+        else if (!wasd.specialControllerActive && convoManager.convoDone && !sKlaar && !wKlaar && settingsMenu.settingsAan )
+        {
+            w.gameObject.SetActive(true);
+            s.gameObject.SetActive(true);
+            tutorialPanel.SetActive(true);
+
+        }
 
         if (wKlaar && sKlaar)
         {
